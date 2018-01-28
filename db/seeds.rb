@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+u = User.create(username: "seth", password_digest: "b", img_url: "w")
+
+t = Track.create(title: "karate chop", length: 44, uploader_id: u.id, genre: "atlanta", img_url: "w")
+
+c = Comment.create(body: "hey", user_id: u.id, track_id: t.id, track_time: 20)
+
+r = Repost.create(user_id: u.id, track_id: t.id)
