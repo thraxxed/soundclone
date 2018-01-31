@@ -1,0 +1,71 @@
+// Place all the styles related to the Root controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#root {
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-bar {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #333333;
+  // align-items: center;
+}
+
+.logo {
+  position: relative;
+  padding: 10px;
+  margin: 0;
+  left: 5%;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+  background-color: #EE602C;
+}
+
+.nav-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.logged-in-buttons {
+  position: relative;
+  right: 25%;
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+}
+
+#signin-btn {
+  position: relative;
+  padding: 10px;
+  margin: 0;
+  color: white;
+  background-color: #333333;
+  border: 1px solid #999999;
+  margin-right: 15px;
+  border-radius: 5px;
+}
+
+#signin-btn:hover {
+  border: 1px solid #FFFFFF;
+}
+
+#signup-btn {
+  position: relative;
+  padding: 10px;
+  margin: 0;
+  color: white;
+  background-color: #EE602C;
+  margin-left: 5px;
+  border-radius: 5px;
+}

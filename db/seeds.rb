@@ -8,6 +8,10 @@
 
 u = User.create(username: "seth", password_digest: "b", img_url: "w")
 
+User.create(username: "smokey", password_digest: "b", img_url: "w")
+
+User.create(username: "kusher", password_digest: "b", img_url: "w")
+
 t = Track.create(title: "karate chop", length: 44, uploader_id: u.id, genre: "atlanta", img_url: "w")
 
 c = Comment.create(body: "hey", user_id: u.id, track_id: t.id, track_time: 20)
