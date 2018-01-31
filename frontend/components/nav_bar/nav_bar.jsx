@@ -15,7 +15,7 @@ const display = currentUser ? (
   );
   return (
     <header className="nav-bar">
-      <h1 className="logo">SOUNDCLONE</h1>
+      <Link to="/" className="logo">SOUNDCLONE</Link>
       <div className="nav-buttons">
         {display}
       </div>
