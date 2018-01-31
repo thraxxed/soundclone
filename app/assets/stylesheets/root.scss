@@ -32,15 +32,20 @@ a {
   background-color: #333333;
 }
 
+
+
 .logo {
   position: relative;
-  padding: 10px;
   margin: 0;
-  left: 5%;
+  left: 7%;
   text-align: center;
   font-size: 16px;
   color: white;
-  background-color: #EE602C;
+}
+
+.nav-prof-img {
+  position: relative;
+  margin-right: 5px;
 }
 
 .nav-buttons {
@@ -48,12 +53,19 @@ a {
   flex-direction: row;
 }
 
-.logged-in-buttons {
+.logged-out-buttons {
   position: relative;
   right: 25%;
   display: flex;
   flex-direction: row;
   margin: 5px;
+}
+
+.btn {
+  position: relative;
+  padding: 10px;
+  margin: 0;
+  color: white;
 }
 
 #signin-btn {
@@ -76,7 +88,19 @@ a {
   padding: 10px;
   margin: 0;
   color: white;
-  background-color: #EE602C;
+  background-color: #ED6032;
   margin-left: 5px;
   border-radius: 5px;
+}
+
+#signout-btn {
+  color: #CCCCCC;
+  margin-left: 5px;
+  margin-right: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+#signout-btn p {
+  margin-left: 10px;
 }

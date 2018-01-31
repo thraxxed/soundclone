@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Soundcloud</title>
+    <title>Soundclone</title>
     <%= csrf_meta_tags %>
-
+    <%= favicon_link_tag 'https://res.cloudinary.com/dbk2furpp/image/upload/v1517376539/soundcloud_favicon_rzwavo.png' %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
+    <% if current_user %>
+      <script>
+        window.currentUser = {
+          "id": <%= current_user.id %>,
+          "username": "<%= current_user.username %>",
+          "img_url": "<%= current_user.img_url %>"
+        }
+      </script>
+    <% end %>
   </head>
 
   <body>

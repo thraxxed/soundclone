@@ -11,11 +11,11 @@ Track.destroy_all
 Comment.destroy_all
 Repost.destroy_all
 
-u = User.create(username: "seth", password_digest: "b", img_url: "w")
+u = User.create(username: "seth", password_digest: "b", img_url: "https://res.cloudinary.com/dbk2furpp/image/upload/v1517378085/diddy_epgz5c.jpg")
 
-User.create(username: "smokey", password_digest: "b", img_url: "w")
+User.create(username: "smokey", password_digest: "b", img_url: "https://res.cloudinary.com/dbk2furpp/image/upload/v1517378085/diddy_epgz5c.jpg")
 
-User.create(username: "kusher", password_digest: "b", img_url: "w")
+User.create(username: "kusher", password_digest: "b", img_url: "https://res.cloudinary.com/dbk2furpp/image/upload/v1517378085/diddy_epgz5c.jpg")
 
 t = Track.create(title: "karate chop", length: 44, uploader_id: u.id, genre: "atlanta", img_url: "w")
 

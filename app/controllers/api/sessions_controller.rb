@@ -5,13 +5,13 @@ class Api::SessionsController < ApplicationController
     if @user.nil?
       render json: ['Incorrect username or password.'], status: 401
     else
-      login!(@user)
+      login(@user)
       render 'api/users/show';
     end
   end
 
   def destroy
-    logout!
+    logout
     render json: { message: 'Logout successful.' }
   end
 end
