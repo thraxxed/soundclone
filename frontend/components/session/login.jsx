@@ -23,12 +23,28 @@ class Login extends React.Component {
       .then(() => this.props.history.push('/'));
   }
 
+  renderErrors() {
+    console.log("d");
+    console.log(this.props.errors);
+    if (!this.props.errors) return;
+    return (
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
   render() {
     return (
       <div className="modal is-open">
         <form className="modal-form">
           <Link to="/">X</Link>
           <img id="logo" height="46" width="70" src="https://res.cloudinary.com/dbk2furpp/image/upload/v1517376539/soundcloud_favicon_rzwavo.png"></img>
+          {this.renderErrors()}
           <label>Username
             <input
               type="text"

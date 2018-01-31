@@ -14,6 +14,7 @@
 class User < ApplicationRecord
   validates :password, length: { minimum: 6, allow_nil: true }
   validates :username, :img_url, :password_digest, :session_token, presence: true
+  validates :username, uniqueness: true
 
   has_many :tracks,
     class_name: 'Track',
