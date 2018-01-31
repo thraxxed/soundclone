@@ -25,11 +25,10 @@
   top: 100px;
   left: 35%;
   width: 400px;
-  height: 500px;
+  height: 600px;
   background: #fff;
   z-index: 3;
-  border-radius: 5px;
-  border: 1px solid #000;
+  // border: 1px solid #000;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -76,6 +75,7 @@
   width: 325px;
   height: 50px;
   font-size: 18px;
+  padding: 10px;
 }
 
 .form-errors {
@@ -83,8 +83,15 @@
   list-style: none;
   color: #f50;
   right: 15px;
+  top: -25px;
 }
 
 .gray-out {
   background: rgba(0, 0, 0, 0.1);
+}
+
+#close-modal-button {
+  position: relative;
+  left: 45%;
+  color: lightgrey;
 }
