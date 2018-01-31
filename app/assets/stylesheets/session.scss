@@ -25,12 +25,11 @@
   top: 100px;
   left: 35%;
   width: 400px;
-  height: 200px;
+  height: 500px;
   background: #fff;
   z-index: 3;
   border-radius: 5px;
   border: 1px solid #000;
-
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -38,7 +37,6 @@
 }
 
 .modal-close {
-
   position: absolute;
   top: 10px;
   right: 20px;
@@ -59,4 +57,34 @@
 
 .modal-form > p {
   margin: 0 0 20px 0;
+}
+
+.submit-btn {
+  position: relative;
+  background-color: #f50;
+  color: white;
+  border: 1px solid #f50;
+  border-radius: 2px;
+  width: 325px;
+  height: 50px;
+  font-size: 16px;
+  top: -60px;
+}
+
+.form-input {
+  position: relative;
+  width: 325px;
+  height: 50px;
+  font-size: 18px;
+}
+
+.form-errors {
+  position: relative;
+  list-style: none;
+  color: #f50;
+  right: 15px;
+}
+
+.gray-out {
+  background: rgba(0, 0, 0, 0.1);
 }
