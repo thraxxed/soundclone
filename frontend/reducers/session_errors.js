@@ -1,6 +1,7 @@
 import {
   RECEIVE_SESSION_ERRORS,
   RECEIVE_CURRENT_USER,
+  CLEAR_ERRORS
 } from '../actions/session.js';
 
 export default (state = [], action) => {
@@ -10,6 +11,8 @@ export default (state = [], action) => {
       return action.errors;
     case RECEIVE_CURRENT_USER:
       return null;
+    case CLEAR_ERRORS:
+      return [];
     default:
       return state;
   }
