@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Signup extends React.Component {
   constructor(props) {
@@ -24,9 +25,10 @@ class Signup extends React.Component {
 
   render() {
     return (
-      <div className="session-form">
-        <h2>Sign Up!</h2>
-        <form>
+      <div className="modal is-open">
+        <form className="modal-form">
+          <Link to="/">X</Link>
+          <img id="logo" height="46" width="70" src="https://res.cloudinary.com/dbk2furpp/image/upload/v1517376539/soundcloud_favicon_rzwavo.png"></img>
           <label>Username:
             <input
               type="text"
@@ -40,8 +42,8 @@ class Signup extends React.Component {
               value={this.state.password}
               onChange={this.handleInput('password')}
             />
-            <button onClick={this.handleSubmit}>Sign Up!</button>
           </label>
+          <button onClick={this.handleSubmit}>Sign Up!</button>
         </form>
       </div>
     );

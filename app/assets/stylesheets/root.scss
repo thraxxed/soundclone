@@ -9,13 +9,21 @@
 .main {
   position: fixed;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .session-form {
+  display: flex;
+  flex-direction: column;
   position: relative;
+  text-align: center;
   top: 100px;
   z-index: 5;
+}
+
+.session-form form {
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -103,4 +111,8 @@ a {
 
 #signout-btn p {
   margin-left: 10px;
+}
+
+.signup-form {
+
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Login extends React.Component {
   constructor(props) {
@@ -24,10 +25,11 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div className="session-form">
-        <h2>Login!</h2>
-        <form>
-          <label>Username:
+      <div className="modal is-open">
+        <form className="modal-form">
+          <Link to="/">X</Link>
+          <img id="logo" height="46" width="70" src="https://res.cloudinary.com/dbk2furpp/image/upload/v1517376539/soundcloud_favicon_rzwavo.png"></img>
+          <label>Username
             <input
               type="text"
               value={this.state.username}
@@ -40,8 +42,8 @@ class Login extends React.Component {
               value={this.state.password}
               onChange={this.handleInput('password')}
             />
-          <button onClick={this.handleSubmit}>Login!</button>
           </label>
+          <button onClick={this.handleSubmit}>Login!</button>
         </form>
       </div>
     );
