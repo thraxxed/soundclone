@@ -8,9 +8,8 @@ import SplashContainer from './splash_container.jsx';
 
 export default () => (
   <div className="main">
-    <Switch>
-      {window.currentUser ? <Route path="/" component={NavBarContainer}/> : <AuthRoute path="/" component={SplashContainer}/>}
-    </Switch>
+    <ProtectedRoute path="/" component={NavBarContainer}/>
+    <AuthRoute path="/" component={SplashContainer}/>
     <AuthRoute path="/signup" component={SignupContainer}/>
     <AuthRoute path="/login" component={LoginContainer}/>
   </div>
