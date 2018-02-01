@@ -21,8 +21,9 @@ class Splash extends React.Component {
           <br></br>
           <br></br>
           <br></br>
-          <br></br>
           <p>Discover, stream, and share a constantly expanding mix of music<br></br> from emerging and major artists around the world</p>
+          <br></br>
+          <Link id="hero-bottom-signup-btn" className="btn" to="/signup">Sign up for free</Link>
         </div>
       </div>
     );

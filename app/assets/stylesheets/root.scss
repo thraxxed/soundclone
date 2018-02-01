@@ -6,6 +6,9 @@
   font-family: "Open Sans";
 }
 
+.btn {
+  letter-spacing: 1px;
+}
 
 .session-form {
   display: flex;
@@ -88,7 +91,7 @@ a {
   border-radius: 3px;
   height: 5px;
   width: 47.5px;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 #signin-btn:hover {
@@ -106,7 +109,7 @@ a {
   border-radius: 3px;
   height: 5px;
   width: 100px;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 #signout-btn {
@@ -118,7 +121,7 @@ a {
   margin-right: 15px;
   border-radius: 3px;
   height: 5px;
-  font-size: 14px;
+  font-size: 12px;
   color: #ccc;
 }
 
