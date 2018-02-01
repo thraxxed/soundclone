@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { login, clearErrorsThunk } from '../../actions/session';
 import Login from './login';
+import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state) => {
   console.log(state.errors);
@@ -16,4 +17,4 @@ const mapDispatchToProps = dispatch => ({
   clearErrors: () => dispatch(clearErrorsThunk())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Login));

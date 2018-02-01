@@ -1,0 +1,62 @@
+.hero-img {
+  position: fixed;
+  margin: 0 auto;
+  width: 1240px;
+  height: 450px;
+  left: 97.9px;
+  top: 0px;
+  background-repeat: no-repeat;
+  background-image: url("https://res.cloudinary.com/dbk2furpp/image/upload/v1517449915/hero_mlydvc.jpg");
+  border-top: 5px solid #f50;
+}
+
+.hero-img div h2 {
+  color: white;
+}
+
+.hero-img div p {
+  color: white;
+}
+
+.hero-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-flex h2 {
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+.hero-flex p {
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.hero-buttons {
+  position: relative;
+  left: 485px;
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+}
+
+#hero-signin-btn {
+  position: relative;
+  padding: 10px;
+  margin-top: 4.25px;
+  color: white;
+  border: 1px solid lightgrey;
+  margin-right: 15px;
+  border-radius: 3px;
+  height: 7.5px;
+  width: 55px;
+  font-size: 12px;
+  font-weight: 2;
+}
+
+#hero-signin-btn:hover {
+  border: 1px solid #FFFFFF;
+}

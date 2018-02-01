@@ -19,7 +19,7 @@ const display = currentUser ? (
   return (
     <header className="nav-bar">
       <Link to="/">
-        <img className="nav-logo" src="https://res.cloudinary.com/dbk2furpp/image/upload/c_scale,h_256/v1517444486/soundcloud_favicon_rzwavo.png"></img>
+        <img className="nav-logo" src="https://res.cloudinary.com/dbk2furpp/image/upload/v1517458622/nav-logo_xni5nn.png"></img>
       </Link>
       <div className="nav-buttons">
         {display}
