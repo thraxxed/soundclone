@@ -12,5 +12,6 @@ export default () => (
     <AuthRoute path="/" component={SplashContainer}/>
     <AuthRoute path="/signup" component={SignupContainer}/>
     <AuthRoute path="/login" component={LoginContainer}/>
+    
   </div>
 );

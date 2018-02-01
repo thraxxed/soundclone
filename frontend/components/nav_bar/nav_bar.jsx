@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 export default ({ currentUser, logout }) => {
 const display = currentUser ? (
     <div className="nav-buttons">
+      <Link className="upload-btn" to="/upload">Upload</Link>
       <Link className="profile-link" to="/">
         <img className="nav-prof-img" src={currentUser.img_url}></img>
         <span>{currentUser.username}</span>
