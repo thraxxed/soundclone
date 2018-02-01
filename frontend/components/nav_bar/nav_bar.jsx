@@ -12,7 +12,7 @@ const display = currentUser ? (
     </div>
   ) : (
     <div className="logged-out-buttons">
-      <Link id="signin-btn" className="btn" to="/login">Sign In</Link>
+      <Link id="signin-btn" className="btn" to="/login"><span className="button-text">Sign In</span></Link>
       <Link id="signup-btn" className="btn" to="/signup">Create Account</Link>
     </div>
   );
