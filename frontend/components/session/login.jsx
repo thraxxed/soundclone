@@ -9,6 +9,7 @@ class Login extends React.Component {
       password: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
   }
 
   componentDidMount() {
@@ -33,6 +34,18 @@ class Login extends React.Component {
       .then(() => this.props.history.push('/'));
   }
 
+  demoLogin(e) {
+    const formUser = {
+      username: 'username',
+      password: 'password'
+    };
+    e.preventDefault();
+    this.props.demoLogin(formUser)
+      .then(() => this.props.history.push('/'));
+  }
+
+
+
   renderErrors() {
     if (!this.props.errors) return;
     return (
@@ -51,7 +64,8 @@ class Login extends React.Component {
       <div className="modal is-open">
         <form className="modal-form">
           <Link id="close-modal-button" to="/">X</Link>
-          <img id="logo" height="100" width="200" src="https://res.cloudinary.com/dbk2furpp/image/upload/v1517435130/soundcloud_logo_gbztnk.png"></img>
+          {/*<img id="logo" height="100" width="200" src="https://res.cloudinary.com/dbk2furpp/image/upload/v1517435130/soundcloud_logo_gbztnk.png"></img>*/}
+          <img className="logo" src="https://res.cloudinary.com/dbk2furpp/image/upload/v1517435130/soundcloud_logo_gbztnk.png"></img>
           <label>
             <input
               placeholder="Your username *"
@@ -72,6 +86,7 @@ class Login extends React.Component {
           </label>
           {this.renderErrors()}
           <button className="submit-btn" onClick={this.handleSubmit}>Sign in</button>
+          <button className="submit-btn" onClick={this.demoLogin}>Demo Login</button>
         </form>
       </div>
     );

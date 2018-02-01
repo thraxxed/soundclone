@@ -2,17 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.modal {
-  display: none;
-}
 
-.modal.is-open {
-  display: block;
+
+// .modal.is-open {
+//   position: absolute;
+//   background-color: rgba(0, 0, 0, .7);
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   top: 0;
+// }
+
+.modal {
+  position: absolute;
+  background: rgba(257, 257, 257, 0.4);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
 }
 
 .modal-screen {
   position: fixed;
-  background: rgba(0, 0, 0, 0.7);
   top: 0;
   bottom: 0;
   left: 0;
@@ -21,14 +34,10 @@
 }
 
 .modal-form {
-  position: fixed;
-  top: 100px;
-  left: 35%;
+  margin: 0 auto;
   width: 400px;
-  height: 600px;
+  height: 620px;
   background: #fff;
-  z-index: 3;
-  // border: 1px solid #000;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -63,19 +72,21 @@
   background-color: #f50;
   color: white;
   border: 1px solid #f50;
-  border-radius: 2px;
-  width: 325px;
-  height: 50px;
+  border-radius: 3px;
+  width: 345px;
+  height: 40px;
   font-size: 16px;
   top: -60px;
+  text-align: center;
 }
 
 .form-input {
   position: relative;
   width: 325px;
-  height: 50px;
   font-size: 18px;
   padding: 10px;
+  border-radius: 3px;
+  border: 1px solid lightgrey;
 }
 
 .form-errors {
@@ -94,4 +105,13 @@
   position: relative;
   left: 45%;
   color: lightgrey;
+}
+
+.modal-form > img {
+  position: relative;
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+  width: 65%;
+  color: white;
 }

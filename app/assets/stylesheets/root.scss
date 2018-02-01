@@ -7,7 +7,6 @@
 }
 
 .main {
-  position: fixed;
   display: flex;
   flex-direction: row;
 }
@@ -41,16 +40,6 @@ a {
 }
 
 
-
-.logo {
-  position: relative;
-  margin: 0;
-  left: 7%;
-  text-align: center;
-  font-size: 16px;
-  color: white;
-}
-
 .nav-prof-img {
   position: relative;
   margin-right: 5px;
@@ -74,6 +63,7 @@ a {
   padding: 10px;
   margin: 0;
   color: white;
+  font-size: 14px;
 }
 
 #signin-btn {
@@ -120,4 +110,10 @@ a {
 
 #signout-btn p {
   margin-left: 10px;
+}
+
+.nav-logo {
+  height: auto;
+  width: 71.3px;
+  margin-left: 50px;
 }

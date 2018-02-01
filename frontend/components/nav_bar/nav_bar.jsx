@@ -18,8 +18,8 @@ const display = currentUser ? (
   );
   return (
     <header className="nav-bar">
-      <Link className="logo" to="/" className="logo">
-        <img id="logo" height="46" width="70" src="https://res.cloudinary.com/dbk2furpp/image/upload/v1517376539/soundcloud_favicon_rzwavo.png"></img>
+      <Link to="/">
+        <img className="nav-logo" src="https://res.cloudinary.com/dbk2furpp/image/upload/c_scale,h_256/v1517444486/soundcloud_favicon_rzwavo.png"></img>
       </Link>
       <div className="nav-buttons">
         {display}
