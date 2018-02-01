@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #root {
-  font-family: sans-serif;
+  font-family: "Open Sans";
 }
 
 .main {
@@ -40,14 +40,11 @@ a {
 }
 
 
-.nav-prof-img {
-  position: relative;
-  margin-right: 5px;
-}
 
 .nav-buttons {
   display: flex;
   flex-direction: row;
+  margin-right: 25px;
 }
 
 .logged-out-buttons {
@@ -58,12 +55,21 @@ a {
   margin: 5px;
 }
 
-.btn {
-  position: relative;
-  padding: 10px;
-  margin: 0;
-  color: white;
-  font-size: 14px;
+.profile-link {
+  display: flex;
+  flex-direction: row;
+  margin-right: 25px;
+  align-items: center;
+}
+
+
+.nav-prof-img {
+  height: auto;
+  width: 40px;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 15px;
+  padding: 5px;
 }
 
 #signin-btn {
@@ -115,5 +121,5 @@ a {
 .nav-logo {
   height: auto;
   width: 71.3px;
-  margin-left: 50px;
+  margin-left: 90px;
 }

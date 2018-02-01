@@ -64,7 +64,6 @@ class Login extends React.Component {
       <div className="modal is-open">
         <form className="modal-form">
           <Link id="close-modal-button" to="/">X</Link>
-          {/*<img id="logo" height="100" width="200" src="https://res.cloudinary.com/dbk2furpp/image/upload/v1517435130/soundcloud_logo_gbztnk.png"></img>*/}
           <img className="logo" src="https://res.cloudinary.com/dbk2furpp/image/upload/v1517435130/soundcloud_logo_gbztnk.png"></img>
           <label>
             <input

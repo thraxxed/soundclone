@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 export default ({ currentUser, logout }) => {
 const display = currentUser ? (
     <div className="nav-buttons">
-      <Link className="btn" to="/">
-        <img id="nav-prof-img" height="25" width="25" src={currentUser.img_url}></img>
+      <Link className="profile-link" to="/">
+        <img className="nav-prof-img" src={currentUser.img_url}></img>
         <span>{currentUser.username}</span>
       </Link>
       <Link id="signout-btn" className="btn" to="/" onClick={logout}>Sign out</Link>
