@@ -17,7 +17,11 @@ User.create(username: "seed2", password_digest: "b", img_url: "https://res.cloud
 
 User.create(username: "seed3", password_digest: "b", img_url: "https://res.cloudinary.com/dbk2furpp/image/upload/v1517378085/diddy_epgz5c.jpg")
 
-t = Track.create(title: "karate chop", length: 44, uploader_id: u.id, genre: "atlanta", img_url: "w")
+t = Track.create(title: "karate chop", length: 44, uploader_id: u.id, genre: "atlanta",
+                 track_file_name: "w.mp3", track_content_type: "audio/mp3", track_file_size: 44, track_updated_at: Date.new)
+
+t = Track.create(title: "fool ya", length: 44, uploader_id: u.id, genre: "drill",
+                  track_file_name: "fool_ya.mp3", track_content_type: "audio/mp3", track_file_size: 44, track_updated_at: Date.new)
 
 c = Comment.create(body: "hey", user_id: u.id, track_id: t.id, track_time: 20)
 
