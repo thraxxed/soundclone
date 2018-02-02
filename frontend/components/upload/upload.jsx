@@ -34,7 +34,6 @@ class Upload extends React.Component {
     formData.append("track[genre]", this.state.genre);
     formData.append("track[track]", this.state.audioFile);
     formData.append("track[image]", this.state.imageFile);
-    // console.log(this.state);
     console.log(this.props.createNewTrack);
     console.log(postTrack);
     console.log(formData);

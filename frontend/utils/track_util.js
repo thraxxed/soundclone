@@ -1,6 +1,4 @@
 export const postTrack = (track) => {
-  console.log("inside the ajax call");
-  console.log(track);
   return $.ajax({
     url: '/api/tracks',
     method: 'POST',
@@ -9,4 +7,11 @@ export const postTrack = (track) => {
     processData: false,
     data: track
   });
+};
+
+export const fetchAllTracks = () => {
+  return $.ajax({
+    url: '/api/tracks',
+    method: 'GET'
+  })
 };

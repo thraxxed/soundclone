@@ -7,11 +7,6 @@ class Api::TracksController < ApplicationController
 
     # TODO FIX THIS GARBAGE vvvvvvvvvvvv
     @track.length = 120;
-    # @track.track_file_name = "w.mp3"
-    # @track.track_content_type = "audio/mp3"
-    # @track.track_file_size = 44
-    # @track.track_updated_at = Date.new
-    # @track.length = 120
     # TODO ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     if @track.save
@@ -24,6 +19,7 @@ class Api::TracksController < ApplicationController
 
   def index
     @tracks = Track.all
+    @users = User.all
     render :index
   end
 
