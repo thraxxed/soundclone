@@ -21,6 +21,9 @@ class User < ApplicationRecord
     primary_key: :id,
     foreign_key: :uploader_id
 
+  has_attached_file :avatar, default_url: "https://res.cloudinary.com/dbk2furpp/image/upload/v1517363601/default_profile_pic_heczvd.jpg"
+  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
+
   after_initialize :ensure_session_token
 
   attr_reader :password

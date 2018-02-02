@@ -1,4 +1,19 @@
 .tracks-list {
-  position: fixed;
-  top: 100px;
+  // position: relative;
+  // margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow: scroll;
+}
+
+.track {
+  margin: 25px;
+  border: 1px solid lightgrey;
+}
+
+.track-img {
+  height: 100px;
+  width: 100px;
 }

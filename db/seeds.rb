@@ -1,4 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
+  # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
@@ -13,15 +13,21 @@ Repost.destroy_all
 
 u = User.create(username: "username", password: "password", img_url: "https://res.cloudinary.com/dbk2furpp/image/upload/v1517378085/diddy_epgz5c.jpg")
 
-User.create(username: "seed2", password_digest: "b", img_url: "https://res.cloudinary.com/dbk2furpp/image/upload/v1517378085/diddy_epgz5c.jpg")
+u2 = User.create(username: "seth", password_digest: "b", img_url: "https://res.cloudinary.com/dbk2furpp/image/upload/v1517378085/diddy_epgz5c.jpg")
 
 User.create(username: "seed3", password_digest: "b", img_url: "https://res.cloudinary.com/dbk2furpp/image/upload/v1517378085/diddy_epgz5c.jpg")
 
-t = Track.create(title: "karate chop", length: 44, uploader_id: u.id, genre: "atlanta",
-                 track_file_name: "w.mp3", track_content_type: "audio/mp3", track_file_size: 44, track_updated_at: Date.new)
+t = Track.new(title: "based god", length: 44, uploader_id: u2.id, genre: "Hip-Hop")
 
-t = Track.create(title: "fool ya", length: 44, uploader_id: u.id, genre: "drill",
-                  track_file_name: "fool_ya.mp3", track_content_type: "audio/mp3", track_file_size: 44, track_updated_at: Date.new)
+t.track = open('app/assets/audio/basedgod.mp3')
+t.image = open('app/assets/images/blueflame_art.jpg')
+t.save
+
+t = Track.new(title: "Don't Like", length: 44, uploader_id: u2.id, genre: "Drill")
+
+t.track = open('app/assets/audio/basedgod.mp3')
+t.image = open('app/assets/images/finallyrich_art.jpg')
+t.save
 
 c = Comment.create(body: "hey", user_id: u.id, track_id: t.id, track_time: 20)
 

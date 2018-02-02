@@ -59,6 +59,14 @@ class Upload extends React.Component {
     if (file) fileReader.readAsDataURL(file);
   }
 
+  componentDidMount() {
+    document.title = "Upload";
+  }
+
+  componentWillUnmount() {
+    document.title = "Soundclone";
+  }
+
   render() {
     return (
       <div className="upload-page">
