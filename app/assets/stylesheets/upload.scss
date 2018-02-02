@@ -1,0 +1,30 @@
+.upload-page {
+  position: fixed;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+}
+
+.upload-page > h1 {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.upload-submit-btn {
+  background-color: #f50;
+  color: white;
+  border: 1px solid #f50;
+  border-radius: 3px;
+  width: 345px;
+  height: 40px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.upload-img {
+  width: 200px;
+  height: 200px;
+}

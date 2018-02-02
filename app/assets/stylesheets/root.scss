@@ -6,6 +6,12 @@
   font-family: "Open Sans";
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .btn {
   letter-spacing: 1px;
 }

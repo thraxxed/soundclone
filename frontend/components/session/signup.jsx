@@ -13,11 +13,6 @@ class Signup extends React.Component {
 
   componentDidMount() {
     this.props.clearErrors();
-    $("body").addClass("gray-out")
-  }
-
-  componentWillUnmount() {
-    $("body").removeClass("gray-out")
   }
 
   handleInput(type) {

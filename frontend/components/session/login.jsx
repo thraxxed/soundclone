@@ -14,12 +14,6 @@ class Login extends React.Component {
 
   componentDidMount() {
     this.props.clearErrors();
-    console.log();
-    $("body").addClass("gray-out")
-  }
-
-  componentWillUnmount() {
-    $("body").removeClass("gray-out")
   }
 
   handleInput(type) {

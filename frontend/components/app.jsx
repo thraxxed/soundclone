@@ -4,7 +4,8 @@ import NavBarContainer from './nav_bar/nav_bar_container';
 import SignupContainer from './session/signup_container.jsx';
 import LoginContainer from './session/login_container.jsx';
 import { AuthRoute, ProtectedRoute } from '../utils/route_util';
-import SplashContainer from './splash_container.jsx';
+import SplashContainer from './splash/splash_container.jsx';
+import UploadContainer from './upload/upload_container.jsx'
 
 export default () => (
   <div className="main">
@@ -12,6 +13,6 @@ export default () => (
     <AuthRoute path="/" component={SplashContainer}/>
     <AuthRoute path="/signup" component={SignupContainer}/>
     <AuthRoute path="/login" component={LoginContainer}/>
-    
+    <ProtectedRoute path="/upload" component={UploadContainer}/>
   </div>
 );
