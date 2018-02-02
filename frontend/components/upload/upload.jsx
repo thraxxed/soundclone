@@ -29,7 +29,7 @@ class Upload extends React.Component {
     console.log("dispatch an action which creates this song:");
     console.log(this.state);
     // this.props.login(this.state)
-      // .then(() => this.props.history.push('/'));
+    // .then(() => this.props.history.push('/'));
   }
 
   updateImageFile(e) {
