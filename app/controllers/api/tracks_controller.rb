@@ -6,17 +6,18 @@ class Api::TracksController < ApplicationController
 
 
     # TODO FIX THIS GARBAGE vvvvvvvvvvvv
-    @track.track_file_name = "w.mp3"
-    @track.track_content_type = "audio/mp3"
-    @track.track_file_size = 44
-    @track.track_updated_at = Date.new
-    @track.length = 120
+    @track.length = 120;
+    # @track.track_file_name = "w.mp3"
+    # @track.track_content_type = "audio/mp3"
+    # @track.track_file_size = 44
+    # @track.track_updated_at = Date.new
+    # @track.length = 120
     # TODO ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     if @track.save
       render :show
     else
-      render json: @user.errors.full_messages, status: 422
+      render json: @track.errors.full_messages, status: 422
     end
 
   end

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { postTrack } from '../../utils/track_util.js';
+
 class Upload extends React.Component {
   constructor(props) {
     super(props);
@@ -26,10 +28,18 @@ class Upload extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log("dispatch an action which creates this song:");
-    console.log(this.state);
-    // this.props.login(this.state)
-    // .then(() => this.props.history.push('/'));
+
+    let formData = new FormData();
+    formData.append("track[title]", this.state.title);
+    formData.append("track[genre]", this.state.genre);
+    formData.append("track[track]", this.state.audioFile);
+    formData.append("track[image]", this.state.imageFile);
+    // console.log(this.state);
+    console.log(this.props.createNewTrack);
+    console.log(postTrack);
+    console.log(formData);
+    this.props.createNewTrack(formData)
+      .then(() => this.props.history.push('/'));
   }
 
   updateImageFile(e) {
