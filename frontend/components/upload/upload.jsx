@@ -54,25 +54,30 @@ class Upload extends React.Component {
     return (
       <div className="upload-page">
         <h1>Upload to SoundCloud</h1>
+        <br></br><br></br>
         <label>Audio File
           <input type="file" onChange={this.updateAudioFile}/>
         </label>
+        <br></br>
         <label>Track Image
           <input type="file" onChange={this.updateImageFile}/>
         </label>
+        <br></br>
         {this.state.imageUrl ? <img className="upload-img" src={this.state.imageUrl}/> : null}
-        <label>Title
+        <label className="upload-form-inputs">
           <input
-            className="form-input"
+            className="upload-form-input"
             type="text"
+            placeholder="Title *"
             value={this.state.title}
             onChange={this.handleInput('title')}
           />
         </label>
-        <label>Genre
+        <label className="upload-form-inputs">
           <input
-            className="form-input"
+            className="upload-form-input"
             type="text"
+            placeholder="Genre *"
             value={this.state.genre}
             onChange={this.handleInput('genre')}
           />

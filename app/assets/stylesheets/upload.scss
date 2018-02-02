@@ -4,13 +4,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
+  border: 1px solid lightgray;
+  padding: 30px;
   // justify-content: center;
 }
 
 .upload-page > h1 {
   position: relative;
   margin: 0 auto;
-  text-align: center;
+  font-size: 24px;
 }
 
 .upload-submit-btn {
@@ -22,9 +25,23 @@
   height: 40px;
   font-size: 16px;
   text-align: center;
+  margin-top: 20px;
 }
 
 .upload-img {
   width: 200px;
   height: 200px;
+}
+
+.upload-form-inputs {
+  padding: 15px;
+}
+
+.upload-form-input {
+  position: relative;
+  width: 325px;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid lightgrey;
 }
