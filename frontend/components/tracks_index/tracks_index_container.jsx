@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 
 import TracksIndex from './tracks_index.jsx';
 
-import { requestAllTracks } from '../../actions/track.js';
+import { requestAllTracks, deleteTrack } from '../../actions/track.js';
 
 const mapStateToProps = state => {
   return {
@@ -13,7 +13,8 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  requestAllTracks: () => dispatch(requestAllTracks())
+  requestAllTracks: () => dispatch(requestAllTracks()),
+  deleteTrack: id => dispatch(deleteTrack(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TracksIndex);

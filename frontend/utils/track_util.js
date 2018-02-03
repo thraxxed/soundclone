@@ -15,3 +15,10 @@ export const fetchAllTracks = () => {
     method: 'GET'
   })
 };
+
+export const deleteTrack = id => (
+  $.ajax({
+    url: '/api/tracks/' + id,
+    method: 'DELETE'
+  })
+);
