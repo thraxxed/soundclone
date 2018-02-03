@@ -2,13 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 
+const { FaIcon, FaStack } = require('react-fa-icon');
+
 const TracksIndexItem = ({ track, user, currentUser }) => {
   console.log(currentUser);
   return (
     <li className="track">
       <div className="upload-info">
         <img className="uploader-img" src={user.img_url}></img>
-        <span className="when-posted">{user.username} <span id="gray-text">posted a track {track.created_at}</span></span>
+        <span className="when-posted">{user.username} <span className="gray-text">posted a track {track.created_at}</span></span>
       </div>
       <div className="upload-content">
         <img className="track-img" src={track.img_url}></img>
@@ -16,7 +18,15 @@ const TracksIndexItem = ({ track, user, currentUser }) => {
           <h3 className="track-username">{user.username}</h3>
           <h2 className="track-title">{track.title}</h2>
           <audio controls src={track.track_url}></audio>
-          {track.uploader_id === currentUser.id ? <p>Delete this song</p> : null }
+          {track.uploader_id === currentUser.id ?
+            (
+              <div className="delete-track">
+                <button>Delete this track</button>
+              </div>
+            )
+            :
+            null
+          }
         </div>
         <div className="track-tag">
           <p className="tag-p"># {track.genre}</p>
