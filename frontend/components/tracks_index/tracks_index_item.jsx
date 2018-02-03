@@ -2,21 +2,26 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 
-const TracksIndexItem = ({ track, user }) => {
-  if (track.id === 23) {
-    console.log(track);
-    console.log(user);
-  }
-
+const TracksIndexItem = ({ track, user, currentUser }) => {
+  console.log(currentUser);
   return (
     <li className="track">
-      <p>{user.username} posted a track {track.created_at}</p>
-      <div>
-        <img className="track-img" src={track.img_url}></img>
-        <audio controls src={track.track_url}></audio>
-        <h2>{track.title}</h2>
+      <div className="upload-info">
+        <img className="uploader-img" src={user.img_url}></img>
+        <span className="when-posted">{user.username} <span id="gray-text">posted a track {track.created_at}</span></span>
       </div>
-      <p>#{track.genre}</p>
+      <div className="upload-content">
+        <img className="track-img" src={track.img_url}></img>
+        <div className="upload-body">
+          <h3 className="track-username">{user.username}</h3>
+          <h2 className="track-title">{track.title}</h2>
+          <audio controls src={track.track_url}></audio>
+          {track.uploader_id === currentUser.id ? <p>Delete this song</p> : null }
+        </div>
+        <div className="track-tag">
+          <p className="tag-p"># {track.genre}</p>
+        </div>
+      </div>
     </li>
   )
 };

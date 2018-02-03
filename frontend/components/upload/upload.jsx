@@ -38,7 +38,7 @@ class Upload extends React.Component {
     console.log(postTrack);
     console.log(formData);
     this.props.createNewTrack(formData)
-      .then(() => this.props.history.push('/'));
+      .then(() => this.props.history.push('/stream'));
   }
 
   updateImageFile(e) {

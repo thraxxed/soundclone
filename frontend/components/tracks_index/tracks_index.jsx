@@ -26,9 +26,10 @@ class TracksIndex extends React.Component {
     if (tracks.length === 0) return ( <h1>Loading...</h1> );
     return (
       <div>
+        <h1 className="stream-header">Stream</h1>
         <ul className="tracks-list">
           {tracks.map(track => (
-            <TracksIndexItem key={track.id} track={track} user={users[track.uploader_id]}/>
+            <TracksIndexItem key={track.id} currentUser={this.props.currentUser} track={track} user={users[track.uploader_id]}/>
           ))}
         </ul>
       </div>

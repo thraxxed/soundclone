@@ -7,7 +7,8 @@ import { requestAllTracks } from '../../actions/track.js';
 const mapStateToProps = state => {
   return {
     tracks: state.entities.tracks,
-    users: state.entities.users
+    users: state.entities.users,
+    currentUser: state.session.currentUser
   };
 };
 

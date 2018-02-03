@@ -1,5 +1,16 @@
+.stream-header {
+  margin-left: 7%;
+  margin-top: 25px;
+  font-size: 24px;
+  color: #f50;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #f50;
+  width: 85px;
+}
+
 .tracks-list {
-  margin-top: 50px;
+  margin-top: 15px;
   margin-left: 5%;
   display: flex;
   flex-direction: column;
@@ -8,12 +19,83 @@
 }
 
 .track {
-  margin: 25px;
+  margin-left: 25px;
+  margin-top: 25px;
   width: 1000px;
-  border: 1px solid lightgrey;
+  // border: 1px solid lightgrey;
+  display: flex;
+  flex-direction: column;
+}
+
+.upload-info {
+  // padding: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.upload-content {
+  display: flex;
+  flex-direction: row;
+  // justify-content: space-between;
+  justify-content: flex-start;
+  // width: 100px;
+}
+
+.upload-body {
+  margin-left: 15px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.when-posted {
+  margin-top: 7px;
+  margin-left: 10px;
+  font-size: 12px;
 }
 
 .track-img {
-  height: 100px;
-  width: 100px;
+  height: 160px;
+  width: 160px;
+}
+
+.uploader-img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.track-username {
+  font-size: 12px;
+  color: #ccc;
+  margin-bottom: 5px;
+}
+
+.track-title {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.track-tag {
+  background-color: #999;
+
+  border-radius: 5px;
+  height: 25px;
+}
+
+.tag-p {
+  color: white;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+audio {
+  width: 500px;
+}
+
+.gray-text {
+  color: #ccc;
 }
