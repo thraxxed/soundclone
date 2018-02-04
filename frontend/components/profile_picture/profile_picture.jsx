@@ -30,7 +30,7 @@ class ProfilePicture extends React.Component {
     updateUser(formData)
       .then(() => {
         this.props.currentUser.img_url = this.state.imageUrl;
-        this.props.history.push('/stream');
+        this.props.history.push('/users/' + this.props.currentUser.username);
       })
   }
 

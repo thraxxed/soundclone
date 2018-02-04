@@ -73,12 +73,10 @@ a {
 .upload-btn {
   color: #ccc;
   font-size: 13px;
-  // margin-right: 15px;
   margin-left: 12px;
   margin-right: 12px;
   margin-top: 14px;
   font-size: 13px;
-  // text-align: center;
 }
 
 .upload-btn:hover {
@@ -88,12 +86,11 @@ a {
 .nav-upload {
   display: flex;
   justify-content: center;
-  // align-items: center;
   margin-right: 15px;
 }
 
 .nav-prof-img {
-  height: auto;
+  height: 27.5px;
   width: 27.5px;
   align-items: center;
   border-radius: 50%;
