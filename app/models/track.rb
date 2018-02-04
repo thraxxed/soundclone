@@ -26,7 +26,7 @@ class Track < ApplicationRecord
   # validates_attachment_content_type :track, content_type: ["audio/mp3", "audio/mpeg"]
 
   has_attached_file :image, default_url: "https://res.cloudinary.com/dbk2furpp/image/upload/v1517363601/default_profile_pic_heczvd.jpg"
-  validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
+  # validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
   belongs_to :uploader,
     class_name: 'User',
