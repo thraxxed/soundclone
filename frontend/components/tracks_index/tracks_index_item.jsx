@@ -20,8 +20,11 @@ const TracksIndexItem = ({ track, user, currentUser, deleteTrack }) => {
           <audio controls src={track.track_url}></audio>
           {track.uploader_id === currentUser.id ?
             (
-              <div className="delete-track">
-                <button onClick={() => deleteTrack(track.id)}>Delete this track</button>
+              <div className="current-user-track-buttons">
+                <Link to={`/tracks/${track.id}/edit`} className="delete-track" onClick={() => deleteTrack(track.id)}>
+                  <span>Edit</span>
+                </Link>
+                <button className="delete-track" onClick={() => deleteTrack(track.id)}>Delete</button>
               </div>
             )
             :

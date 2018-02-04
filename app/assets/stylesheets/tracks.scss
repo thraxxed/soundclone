@@ -99,15 +99,28 @@ audio {
 }
 
 .delete-track {
+  // align-self: flex-start;
   position: relative;
-  width: 100px;
-  margin-top: 25px;
+  width: 50px;
+  margin-top: 40px;
+  // margin-left: 2.5px;
+  margin-right: 2.5px;
   font-size: 10px;
   border-radius: 3px;
   border: 1px solid lightgrey;
   text-align: center;
 }
 
-.delete-track > p {
-  padding: 3px;
+.delete-track:hover {
+  background-color: #ccc;
+}
+
+.delete-track > span {
+  padding: 15px;
+}
+
+.current-user-track-buttons {
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: flex-end;
 }

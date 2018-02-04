@@ -5,7 +5,7 @@ class Api::TracksController < ApplicationController
     @track.uploader = current_user
 
 
-    # TODO FIX THIS GARBAGE vvvvvvvvvvvv
+    # TODO FIX THIS vvvvvvvvvvvv
     @track.length = 120;
     # TODO ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

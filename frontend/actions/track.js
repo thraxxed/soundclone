@@ -2,11 +2,17 @@
 import * as TrackUtil from '../utils/track_util.js';
 
 export const RECEIVE_ALL_TRACKS = 'RECEIVE_ALL_TRACKS';
+export const RECEIVE_TRACK = 'RECEIVE_TRACK';
 export const REMOVE_TRACK = 'REMOVE_TRACK';
 
 const receiveAllTracks = payload => ({
   type: RECEIVE_ALL_TRACKS,
   payload
+});
+
+const receiveTrack = track => ({
+  type: RECEIVE_TRACK,
+  track
 });
 
 const removeTrack = trackId => ({
@@ -24,4 +30,8 @@ export const createNewTrack = formTrack => dispatch => {
 
 export const deleteTrack = trackId => dispatch => (
   TrackUtil.deleteTrack(trackId).then(track => dispatch(removeTrack(track)))
+);
+
+export const updateTrack = track => dispatch => (
+  TrackUtil.updateTrack(track).then(track => dispatch(receiveTrack(track)))
 );

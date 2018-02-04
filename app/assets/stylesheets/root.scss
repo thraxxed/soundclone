@@ -10,6 +10,7 @@
   // display: flex;
   // flex-direction: column;
   // align-items: center;
+  // position: relative;
 }
 
 .btn {
@@ -34,6 +35,8 @@ a {
   text-decoration: none;
 }
 
+
+
 .nav-bar {
   position: sticky;
   width: 100%;
@@ -43,8 +46,6 @@ a {
   justify-content: space-between;
   background-color: #333333;
 }
-
-
 
 .nav-buttons {
   display: flex;
