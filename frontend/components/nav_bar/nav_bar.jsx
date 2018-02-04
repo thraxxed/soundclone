@@ -5,7 +5,7 @@ export default ({ currentUser, logout }) => {
 const display = currentUser ? (
     <div className="nav-buttons">
       <Link className="upload-btn" to="/upload">Upload</Link>
-      <Link className="profile-link" to="/">
+      <Link className="profile-link" to={`/users/${currentUser.username}`}>
         <img className="nav-prof-img" src={currentUser.img_url}></img>
         <span>{currentUser.username}</span>
       </Link>
@@ -19,8 +19,9 @@ const display = currentUser ? (
   );
   return (
     <header className="nav-bar">
-      <Link to="/stream">
-        <img className="nav-logo" src="https://res.cloudinary.com/dbk2furpp/image/upload/v1517458622/nav-logo_xni5nn.png"></img>
+      <Link className="stream-link" to="/stream">
+        <img className="nav-logo" src="https://res.cloudinary.com/dbk2furpp/image/upload/v1517435130/soundcloud_logo_gbztnk.png"></img>
+        <div className="nav-home"><span>Home</span></div>
       </Link>
       <div className="nav-buttons">
         {display}

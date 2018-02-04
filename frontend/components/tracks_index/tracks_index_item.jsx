@@ -1,22 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ReactDOM from 'react-dom';
-
-const { FaIcon, FaStack } = require('react-fa-icon');
 
 const TracksIndexItem = ({ track, user, currentUser, deleteTrack }) => {
   return (
     <li className="track">
       <div className="upload-info">
-        <img className="uploader-img" src={user.img_url}></img>
-        <span className="when-posted">{user.username} <span className="gray-text">posted a track {track.created_at}</span></span>
+        <Link className="track-profile-link" to={`/users/${user.username}`}>
+            <img className="uploader-img" src={user.img_url}></img>
+            <span className="when-posted">{user.username}</span>
+        </Link>
+        <span className="gray-text">posted a track {track.created_at}</span>
       </div>
       <div className="upload-content">
         <img className="track-img" src={track.img_url}></img>
         <div className="upload-body">
           <h3 className="track-username">{user.username}</h3>
           <h2 className="track-title">{track.title}</h2>
-          <audio controls src={track.track_url}></audio>
+          <audio className="audioplayer" controlsList="nodownload" controls src={track.track_url}></audio>
           {track.uploader_id === currentUser.id ?
             (
               <div className="current-user-track-buttons">

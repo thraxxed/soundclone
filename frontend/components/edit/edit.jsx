@@ -8,11 +8,16 @@ import { updateTrack } from '../../utils/track_util.js';
 class Edit extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      title: this.props.track.title,
-      genre: this.props.track.genre,
-      imageFile: null,
-      imageUrl: this.props.track.img_url
+    this.badId = false;
+    if (!this.props.track) {
+      this.badId = true;
+    } else {
+      this.state = {
+        title: this.props.track.title,
+        genre: this.props.track.genre,
+        imageFile: null,
+        imageUrl: this.props.track.img_url
+      }
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInput = this.handleInput.bind(this);
@@ -28,7 +33,6 @@ class Edit extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let formData = new FormData();
-    console.log(this.props.track.id + " hey");
     formData.append("track[id]", this.props.track.id);
     formData.append("track[title]", this.state.title);
     formData.append("track[genre]", this.state.genre);
@@ -55,7 +59,7 @@ class Edit extends React.Component {
   }
 
   render() {
-    if (this.props.track.uploader_id !== this.props.currentUser.id) {
+    if (this.badId || this.props.track.uploader_id !== this.props.currentUser.id) {
       return (
         <Redirect to="/stream"/>
       )

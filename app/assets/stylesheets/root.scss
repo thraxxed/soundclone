@@ -6,13 +6,6 @@
   font-family: "Open Sans";
 }
 
-.main {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // position: relative;
-}
-
 .btn {
   letter-spacing: 1px;
 }
@@ -70,7 +63,7 @@ a {
 
 .profile-link > span {
   color: #ccc;
-  font-size: 14px;
+  font-size: 12.5px;
 }
 
 .profile-link > span:hover {
@@ -79,10 +72,10 @@ a {
 
 .upload-btn {
   color: #ccc;
-  font-size: 14px;
+  font-size: 12.5px;
   margin-right: 15px;
   margin-top: 14px;
-  font-size: 14px;
+  font-size: 12.5px;
 }
 
 .upload-btn:hover {
@@ -154,7 +147,7 @@ a {
 
 .nav-logo {
   height: auto;
-  width: 192.5px;
+  width: 80.25px;
   margin-left: 98px;
 }
 
@@ -167,4 +160,27 @@ a {
 
 .button-text {
   margin-bottom: 2px;
+}
+
+.stream-link {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1.4px solid black;
+  width: 100px;
+}
+
+.nav-home > span {
+  text-align: center;
+  color: #ccc;
+  font-size: 12.5px;
+}
+
+.nav-home > span:hover {
+  color: white;
 }
