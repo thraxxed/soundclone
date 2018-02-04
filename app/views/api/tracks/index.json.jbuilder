@@ -19,7 +19,7 @@ json.users do
     json.set! user.id do
         json.id user.id
         json.username user.username
-        json.img_url asset_path(user.img_url)
+        json.img_url asset_path(user.avatar.url)
     end
   end
 end

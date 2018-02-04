@@ -12,7 +12,7 @@
         window.currentUser = {
           "id": <%= current_user.id %>,
           "username": "<%= current_user.username %>",
-          "img_url": "<%= current_user.img_url %>"
+          "img_url": "<%= current_user.avatar.url %>"
         }
       </script>
     <% end %>

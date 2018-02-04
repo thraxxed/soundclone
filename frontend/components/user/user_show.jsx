@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Route, Redirect } from 'react-router';
 
 const UserShow = ({ user, currentUser }) => {
-  console.log("made it this far");
+  if (!user) return (<p>Loading...</p>);
   console.log(user);
   if (!user) return (<Redirect to="/"/>)
   return (
@@ -13,7 +13,7 @@ const UserShow = ({ user, currentUser }) => {
           {(user.id === currentUser.id) ?
             <Link className="prof-pic-container" to="/profilepicture">
               <img className="header-profile-img" src={user.img_url}></img>
-              <span class="update-profile-img">Update image</span>
+              <span className="update-profile-img">Update image</span>
             </Link>
             :
             <div className="prof-pic-container">

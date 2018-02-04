@@ -11,11 +11,11 @@ Track.destroy_all
 Comment.destroy_all
 Repost.destroy_all
 
-u = User.create(username: "username", password: "password", img_url: "https://res.cloudinary.com/dbk2furpp/image/upload/v1517378085/diddy_epgz5c.jpg")
+u = User.create(username: "username", password: "password")
 
-u2 = User.create(username: "seth", password_digest: "b", img_url: "https://res.cloudinary.com/dbk2furpp/image/upload/v1517378085/diddy_epgz5c.jpg")
+u2 = User.create(username: "seth", password_digest: "b")
 
-User.create(username: "seed3", password_digest: "b", img_url: "https://res.cloudinary.com/dbk2furpp/image/upload/v1517378085/diddy_epgz5c.jpg")
+User.create(username: "seed3", password_digest: "b")
 
 # t = Track.new(title: "Lil B - based god", length: 44, uploader_id: u2.id, genre: "Hip-Hop")
 #

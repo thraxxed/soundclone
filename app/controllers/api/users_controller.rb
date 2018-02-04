@@ -1,7 +1,7 @@
 class Api::UsersController < ApplicationController
   def create
     @user = User.new(user_params)
-    @user.img_url = "https://res.cloudinary.com/dbk2furpp/image/upload/v1517363601/default_profile_pic_heczvd.jpg"
+    # @user.img_url = "https://res.cloudinary.com/dbk2furpp/image/upload/v1517363601/default_profile_pic_heczvd.jpg"
     if @user.save
       login(@user)
       render :show
@@ -33,10 +33,10 @@ class Api::UsersController < ApplicationController
   private
 
   def selected_user
-    User.find(params[:id])
+    User.find(params[:user][:id])
   end
 
   def user_params
-    params.require(:user).permit(:username, :password)
+    params.require(:user).permit(:username, :password, :avatar)
   end
 end

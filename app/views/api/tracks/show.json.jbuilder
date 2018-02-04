@@ -15,6 +15,6 @@ json.users do
   json.set! @track.uploader.id do
     json.id @track.uploader.id
     json.username @track.uploader.username
-    json.img_url @track.uploader.img_url
+    json.img_url @track.uploader.avatar.url
   end
 end

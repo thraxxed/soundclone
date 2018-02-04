@@ -2,18 +2,22 @@
 #
 # Table name: users
 #
-#  id              :integer          not null, primary key
-#  username        :string           not null
-#  password_digest :string           not null
-#  session_token   :string           not null
-#  img_url         :string           not null
-#  created_at      :datetime         not null
-#  updated_at      :datetime         not null
+#  id                  :integer          not null, primary key
+#  username            :string           not null
+#  password_digest     :string           not null
+#  session_token       :string           not null
+#  img_url             :string           not null
+#  created_at          :datetime         not null
+#  updated_at          :datetime         not null
+#  avatar_file_name    :string
+#  avatar_content_type :string
+#  avatar_file_size    :integer
+#  avatar_updated_at   :datetime
 #
 
 class User < ApplicationRecord
   validates :password, length: { minimum: 6, allow_nil: true }
-  validates :username, :img_url, :password_digest, :session_token, presence: true
+  validates :username, :password_digest, :session_token, presence: true
   validates :username, uniqueness: true
 
   has_many :tracks,
