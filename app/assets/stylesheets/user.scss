@@ -15,6 +15,10 @@
   height: 195px;
 }
 
+.header-profile-img:hover {
+  opacity: 0.5;
+}
+
 .prof-pic-flex {
   margin-left: 2.5%;
   display: flex;
@@ -35,4 +39,22 @@
   background-color: black;
   padding: 6px;
   font-size: 22px;
+}
+
+.update-profile-img {
+  position: absolute;
+  top: 75%;
+  left: 5.25%;
+  background-color: white;
+  opacity: 0;
+  border-radius: 3px;
+  font-size: 13px;
+  padding: 3px;
+  width: 120px;
+  text-align: center;
+  border: 1px solid lightgray;
+}
+
+.prof-pic-container:hover .update-profile-img {
+  opacity: 0.8 !important;
 }

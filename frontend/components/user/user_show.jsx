@@ -10,8 +10,9 @@ const UserShow = ({ user, currentUser }) => {
     <div>
       <div className="profile-header">
         <div className="prof-pic-flex">
-          <Link to="/profilepicture">
+          <Link className="prof-pic-container" to="/profilepicture">
             <img className="header-profile-img" src={user.img_url}></img>
+            <span class="update-profile-img">Update image</span>
           </Link>
         </div>
         <div className="header-username-flex">
