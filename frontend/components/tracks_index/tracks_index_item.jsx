@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom';
 const { FaIcon, FaStack } = require('react-fa-icon');
 
 const TracksIndexItem = ({ track, user, currentUser, deleteTrack }) => {
-  console.log(currentUser);
   return (
     <li className="track">
       <div className="upload-info">
@@ -21,7 +20,7 @@ const TracksIndexItem = ({ track, user, currentUser, deleteTrack }) => {
           {track.uploader_id === currentUser.id ?
             (
               <div className="current-user-track-buttons">
-                <Link to={`/tracks/${track.id}/edit`} className="delete-track" onClick={() => deleteTrack(track.id)}>
+                <Link to={`/tracks/${track.id}/edit`} className="delete-track">
                   <span>Edit</span>
                 </Link>
                 <button className="delete-track" onClick={() => deleteTrack(track.id)}>Delete</button>

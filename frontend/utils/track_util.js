@@ -16,6 +16,13 @@ export const fetchAllTracks = () => {
   })
 };
 
+export const fetchTrack = id => (
+  $.ajax({
+    method: 'GET',
+    url: 'api/tracks/' + id
+  })
+);
+
 export const deleteTrack = id => (
   $.ajax({
     url: '/api/tracks/' + id,
@@ -23,10 +30,14 @@ export const deleteTrack = id => (
   })
 );
 
-export const updateTrack = track => (
-  $.ajax({
-    url: 'api/tracks' + track.id,
+export const updateTrack = track => {
+  console.log(track);
+  return $.ajax({
+    url: 'api/tracks/' + track.id,
     method: 'PATCH',
+    dataType: 'json',
+    contentType: false,
+    processData: false,
     data: track
   })
-);
+};

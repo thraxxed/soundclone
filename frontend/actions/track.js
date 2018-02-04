@@ -24,6 +24,10 @@ export const requestAllTracks = () => dispatch => {
   return TrackUtil.fetchAllTracks().then(payload => dispatch(receiveAllTracks(payload)));
 };
 
+export const requestTrack = id => dispatch => {
+  return TrackUtil.fetchTrack();//.then(track => dispatch(receiveTrack(track)));
+}
+
 export const createNewTrack = formTrack => dispatch => {
   return TrackUtil.postTrack(formTrack);
 };
@@ -33,5 +37,5 @@ export const deleteTrack = trackId => dispatch => (
 );
 
 export const updateTrack = track => dispatch => (
-  TrackUtil.updateTrack(track).then(track => dispatch(receiveTrack(track)))
+  TrackUtil.updateTrack(track)//.then(track => dispatch(receiveTrack(track)))
 );
