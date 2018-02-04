@@ -10,10 +10,16 @@ const UserShow = ({ user, currentUser }) => {
     <div>
       <div className="profile-header">
         <div className="prof-pic-flex">
-          <Link className="prof-pic-container" to="/profilepicture">
-            <img className="header-profile-img" src={user.img_url}></img>
-            <span class="update-profile-img">Update image</span>
-          </Link>
+          {(user.id === currentUser.id) ?
+            <Link className="prof-pic-container" to="/profilepicture">
+              <img className="header-profile-img" src={user.img_url}></img>
+              <span class="update-profile-img">Update image</span>
+            </Link>
+            :
+            <div className="prof-pic-container">
+              <img className="header-profile-img" src={user.img_url}></img>
+            </div>
+          }
         </div>
         <div className="header-username-flex">
           <p className="header-username">{user.username}</p>
