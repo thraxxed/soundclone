@@ -61,10 +61,20 @@ class Upload extends React.Component {
 
   componentDidMount() {
     document.title = "Upload";
+    let home = document.getElementsByClassName("nav-upload");
+    if (home[0]) {
+      home[0].firstChild.classList.add("white-text");
+      home[0].classList.add("home-selected");
+    }
   }
 
   componentWillUnmount() {
     document.title = "Soundclone";
+    let home = document.getElementsByClassName("nav-upload");
+    if (home[0]) {
+      home[0].firstChild.classList.remove("white-text");
+      home[0].classList.remove("home-selected");
+    }
   }
 
   render() {

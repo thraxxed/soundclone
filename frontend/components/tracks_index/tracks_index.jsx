@@ -14,13 +14,24 @@ class TracksIndex extends React.Component {
 
   componentDidMount() {
     document.title = "Your Stream";
+    let home = document.getElementsByClassName("nav-home");
+    if (home[0]) {
+      home[0].firstChild.classList.add("white-text");
+      home[0].classList.add("home-selected");
+    }
   }
 
   componentWillUnmount() {
     document.title = "Soundclone";
+    let home = document.getElementsByClassName("nav-home");
+    if (home[0]) {
+      home[0].firstChild.classList.remove("white-text");
+      home[0].classList.remove("home-selected");
+    }
   }
 
   render() {
+
     const tracks = Object.values(this.props.tracks);
     const users = this.props.users;
     if (tracks.length === 0) return ( <h1>Loading...</h1> );

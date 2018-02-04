@@ -1,0 +1,38 @@
+.profile-header {
+  position: relative;
+  margin: 0 auto;
+  width: 86.55%;
+  height: 260px;
+  background: linear-gradient(315deg, rgb(136, 79, 68) 0%, rgb(47, 41, 41) 100%);
+
+  display: flex;
+  flex-direction: row;
+}
+
+.header-profile-img {
+  border-radius: 50%;
+  width: 195px;
+  height: 195px;
+}
+
+.prof-pic-flex {
+  margin-left: 2.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-username-flex {
+  margin-left: 3%;
+  margin-bottom: 13%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-username {
+  color: white;
+  background-color: black;
+  padding: 6px;
+  font-size: 22px;
+}

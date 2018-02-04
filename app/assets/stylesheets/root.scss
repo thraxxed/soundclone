@@ -63,7 +63,7 @@ a {
 
 .profile-link > span {
   color: #ccc;
-  font-size: 12.5px;
+  font-size: 13px;
 }
 
 .profile-link > span:hover {
@@ -72,16 +72,25 @@ a {
 
 .upload-btn {
   color: #ccc;
-  font-size: 12.5px;
-  margin-right: 15px;
+  font-size: 13px;
+  // margin-right: 15px;
+  margin-left: 12px;
+  margin-right: 12px;
   margin-top: 14px;
-  font-size: 12.5px;
+  font-size: 13px;
+  // text-align: center;
 }
 
 .upload-btn:hover {
   color:white;
 }
 
+.nav-upload {
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  margin-right: 15px;
+}
 
 .nav-prof-img {
   height: auto;
@@ -178,9 +187,17 @@ a {
 .nav-home > span {
   text-align: center;
   color: #ccc;
-  font-size: 12.5px;
+  font-size: 13px;
 }
 
 .nav-home > span:hover {
   color: white;
+}
+
+.home-selected {
+  background-color: #111;
+}
+
+.white-text {
+  color: white !important;
 }
