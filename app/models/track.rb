@@ -23,7 +23,7 @@ class Track < ApplicationRecord
   validates :title, :length, :uploader_id, :genre, presence: true
 
   has_attached_file :track
-  validates_attachment_content_type :track, content_type: ["audio/mp3", "audio/mpeg"]
+  validates_attachment_content_type :track, content_type: ['audio/mpeg', 'audio/x-mpeg', 'audio/mp3', 'audio/x-mp3', 'audio/mpeg3', 'audio/x-mpeg3', 'audio/mpg', 'audio/x-mpg', 'audio/x-mpegaudio']
 
   has_attached_file :image, default_url: "https://res.cloudinary.com/dbk2furpp/image/upload/v1517363601/default_profile_pic_heczvd.jpg"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/

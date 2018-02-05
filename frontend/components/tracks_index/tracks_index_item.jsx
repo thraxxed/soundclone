@@ -49,7 +49,7 @@ const TracksIndexItem = ({ track, user, currentUser, deleteTrack, context }) => 
         <div className="track-tag">
           <p className="tag-p"># {track.genre}</p>
         </div>
-        
+
       </div>
     </li>
   )
