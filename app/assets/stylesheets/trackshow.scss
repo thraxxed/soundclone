@@ -29,4 +29,28 @@
   margin-left: 2.5%;
   width: 100%;
   height: 89%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.track-show-meta {
+  background-color: red;
+  height: 30%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.artist-title {
+  background-color: green;
+  width: 45%;
+}
+
+.meta-info {
+  background-color: darkgreen;
+  width: 45%;
 }
