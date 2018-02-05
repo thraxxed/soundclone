@@ -33,19 +33,30 @@ class TrackShow extends React.Component {
     return (
       <div>
         <div className="trackshow-header">
+
           <div className="track-content-container">
+
             <div className="track-show-meta">
+
               <div className="artist-title">
+                <span>{}</span>
               </div>
+
               <div className="meta-info">
+
               </div>
+
             </div>
+
             <div className="track-show-meta">
             </div>
+
           </div>
+
           <div className="track-art-container">
             <img className="track-art" src={this.props.track.img_url}></img>
           </div>
+
         </div>
 
         <h1 className="user-tracks-header">Track Show Page</h1>
