@@ -26,6 +26,6 @@ export default () => (
     <ProtectedRoute path="/users/:username" component={UserShowContainer}/>
     <ProtectedRoute exact path="/" component={RedirectToStream}/>
     <ProtectedRoute path="/profilepicture" component={ProfilePictureContainer}/>
-    <ProtectedRoute path="/tracks/:trackId" component={TrackShowContainer}/>
+    <ProtectedRoute exact path="/tracks/:trackId/show" component={TrackShowContainer}/>
   </div>
 );

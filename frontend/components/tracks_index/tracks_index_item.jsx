@@ -18,7 +18,7 @@ const TracksIndexItem = ({ track, user, currentUser, deleteTrack, context }) => 
       }
       <div className="upload-content">
 
-        <Link to={`/tracks/${track.id}`}>
+        <Link to={`/tracks/${track.id}/show`}>
           <img className="track-img" src={track.img_url}></img>
         </Link>
 
@@ -26,7 +26,7 @@ const TracksIndexItem = ({ track, user, currentUser, deleteTrack, context }) => 
           <Link to={`/users/${user.username}`}>
             <h3 className="track-username">{user.username}</h3>
           </Link>
-          <Link to={`/tracks/${track.id}`}>
+          <Link to={`/tracks/${track.id}/show`}>
             <h2 className="track-title">{track.title}</h2>
           </Link>
           <audio className="audioplayer" controlsList="nodownload" controls src={track.track_url}></audio>
