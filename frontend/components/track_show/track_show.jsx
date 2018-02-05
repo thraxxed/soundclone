@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 
 
 class TrackShow extends React.Component {
@@ -29,7 +29,7 @@ class TrackShow extends React.Component {
 
     const tracks = Object.values(this.props.tracks);
     const users = this.props.users;
-    if (this.badId || !this.props.track) return ( <Redirect to="/stream"/> );
+    if (this.badId || !this.props.track || !this.props.user) return ( <Redirect to="/stream"/> );
     return (
       <div>
         <div className="trackshow-header">
@@ -39,16 +39,27 @@ class TrackShow extends React.Component {
             <div className="track-show-meta">
 
               <div className="artist-title">
-                <span>{}</span>
+                <Link to={`/users/${this.props.user.username}`} className="artist-flex">
+                  <span className="artist-span">{this.props.user.username}</span>
+                </Link>
+                <div className="title-flex">
+                  <span className="title-span">{this.props.track.title}</span>
+                </div>
               </div>
 
               <div className="meta-info">
-
+                <div className="track-show-created-at">
+                  <span>{this.props.track.created_at}</span>
+                </div>
+                <div className="track-show-genre">
+                  <span># {this.props.track.genre}</span>
+                </div>
               </div>
 
             </div>
 
-            <div className="track-show-meta">
+            <div className="trackshow-audioplayer-container">
+              <audio className="trackshow-audioplayer" controlsList="nodownload" controls src={this.props.track.track_url}></audio>
             </div>
 
           </div>

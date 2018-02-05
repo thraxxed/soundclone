@@ -5,11 +5,15 @@ import { requestAllTracks, deleteTrack, updateTrack } from '../../actions/track.
 
 const mapStateToProps = (state, ownProps) => {
   let track = state.entities.tracks[ownProps.match.params.trackId];
-  console.log(track);
-  // let user = state.entities.users[track.uploader_id];
-  // console.log(user);
+  // console.log(track);
+  let user = {};
+  if (track) {
+    user = state.entities.users[track.uploader_id];
+  }
+  console.log(user);
   return {
     track,
+    user,
     tracks: state.entities.tracks,
     users: state.entities.users,
     currentUser: state.session.currentUser

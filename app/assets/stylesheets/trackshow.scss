@@ -3,7 +3,8 @@
   margin: 0 auto;
   width: 86.55%;
   height: 377.5px;
-  background: linear-gradient(135deg, rgb(242, 238, 237) 0%, rgb(131, 128, 134) 100%);
+  // background: linear-gradient(135deg, rgb(242, 238, 237) 0%, rgb(131, 128, 134) 100%);
+  background: linear-gradient(135deg, rgb(172, 144, 136) 0%, rgb(86, 70, 88) 100%);
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -24,7 +25,7 @@
 }
 
 .track-content-container {
-  background-color: blue;
+  // background-color: blue;
   margin-right: 2.5%;
   margin-left: 2.5%;
   width: 100%;
@@ -36,20 +37,85 @@
 }
 
 .track-show-meta {
-  background-color: red;
-  height: 30%;
-  width: 100%;
+  margin-left: 6.5%;
+  // margin-right: 10%;
+  // background-color: red;
+  height: 80%;
+  width: 90%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
 .artist-title {
-  background-color: green;
+  // background-color: green;
+  color: #ccc;
   width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.artist-span {
+  color: #ccc;
+  background-color: rgba(0,0,0,.8);
+  padding: 2px 8px;
+  font-size: 16px;
+}
+
+.artist-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.title-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.title-span {
+  margin-top: 5px;
+  color: white;
+  background-color: rgba(0,0,0,.8);
+  padding: 2px 8px;
+  font-size: 24px;
 }
 
 .meta-info {
-  background-color: darkgreen;
   width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.trackshow-audioplayer-container {
+  margin-bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: flex-end;
+}
+
+.trackshow-audioplayer {
+  width: 91.5%;
+  color: blue;
+}
+
+.track-show-created-at span {
+  color: white;
+  font-size: 14px;
+}
+
+.track-show-genre {
+  margin-top: 5%;
+}
+
+.track-show-genre span {
+  color: white;
+  background-color: #999;
+  padding: 3px 7px;
+  border-radius: 10px;
+  font-size: 14px;
 }
