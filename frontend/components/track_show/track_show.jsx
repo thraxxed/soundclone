@@ -1,11 +1,16 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 
-// import TracksIndexItem from './tracks_index_item.jsx';
+
 
 class TrackShow extends React.Component {
   constructor(props) {
     super(props);
+    this.badId = false;
+    if (!this.props.track) {
+      this.badId = true;
+    }
+    console.log(this.props.track);
   }
 
   componentWillMount() {
@@ -13,7 +18,7 @@ class TrackShow extends React.Component {
   }
 
   componentDidMount() {
-    document.title = "Track Show Page";
+    if (this.props.track) document.title = this.props.track.title;
   }
 
   componentWillUnmount() {
@@ -24,17 +29,21 @@ class TrackShow extends React.Component {
 
     const tracks = Object.values(this.props.tracks);
     const users = this.props.users;
-    if (tracks.length === 0) return ( <h1>Loading...</h1> );
+    if (this.badId || !this.props.track) return ( <Redirect to="/stream"/> );
     return (
       <div>
-        <div className="profile-header">
-
+        <div className="trackshow-header">
+          <div className="track-content-container">
+          </div>
+          <div className="track-art-container">
+            <img className="track-art" src={this.props.track.img_url}></img>
+          </div>
         </div>
 
         <h1 className="user-tracks-header">Track Show Page</h1>
 
         <ul className="tracks-list">
-          
+
         </ul>
       </div>
     );

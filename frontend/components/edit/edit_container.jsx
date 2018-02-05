@@ -5,7 +5,6 @@ import { updateTrack } from '../../actions/track.js';
 
 const mapStateToProps = (state, ownProps) => {
   let track = state.entities.tracks[ownProps.match.params.trackId];
-  console.log(track);
   return {
     track,
     currentUser: state.session.currentUser

@@ -5,7 +5,6 @@ import TracksIndexItem from '../tracks_index/tracks_index_item.jsx';
 
 const UserShow = ({ user, currentUser, userTracks, users, deleteTrack }) => {
   if (!user) return (<p>Loading...</p>);
-  console.log(userTracks);
   if (!user) return (<Redirect to="/"/>)
   return (
     <div>

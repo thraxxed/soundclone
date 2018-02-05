@@ -7,16 +7,13 @@
 
   display: flex;
   flex-direction: row;
+
 }
 
 .header-profile-img {
   border-radius: 50%;
   width: 195px;
   height: 195px;
-}
-
-.header-profile-img:hover {
-  // opacity: 0.5;
 }
 
 .prof-pic-flex {
