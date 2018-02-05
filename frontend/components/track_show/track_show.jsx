@@ -70,8 +70,8 @@ class TrackShow extends React.Component {
 
         </div>
 
-        <h1 className="user-tracks-header">Track Show Page</h1>
-
+        <h1 className="user-tracks-header">Write a comment goes here</h1>
+        <h1 className="user-tracks-header">comments go here</h1>
         <ul className="tracks-list">
 
         </ul>
