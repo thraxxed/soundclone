@@ -1,16 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const TracksIndexItem = ({ track, user, currentUser, deleteTrack }) => {
+const TracksIndexItem = ({ track, user, currentUser, deleteTrack, context }) => {
+  console.log(context);
   return (
     <li className="track">
-      <div className="upload-info">
-        <Link className="track-profile-link" to={`/users/${user.username}`}>
-            <img className="uploader-img" src={user.img_url}></img>
-            <span className="when-posted">{user.username}</span>
-        </Link>
-        <span className="gray-text">posted a track {track.created_at}</span>
-      </div>
+      { (context === "stream") ?
+        <div className="upload-info">
+          <Link className="track-profile-link" to={`/users/${user.username}`}>
+              <img className="uploader-img" src={user.img_url}></img>
+              <span className="when-posted">{user.username}</span>
+          </Link>
+          <span className="gray-text">posted a track {track.created_at}</span>
+        </div>
+        :
+        null
+      }
       <div className="upload-content">
         <img className="track-img" src={track.img_url}></img>
         <div className="upload-body">

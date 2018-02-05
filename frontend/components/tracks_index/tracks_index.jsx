@@ -40,7 +40,7 @@ class TracksIndex extends React.Component {
         <h1 className="stream-header">Stream</h1>
         <ul className="tracks-list">
           {tracks.map(track => (
-            <TracksIndexItem key={track.id} deleteTrack={this.props.deleteTrack} currentUser={this.props.currentUser} track={track} user={users[track.uploader_id]}/>
+            <TracksIndexItem key={track.id} context="stream" deleteTrack={this.props.deleteTrack} currentUser={this.props.currentUser} track={track} user={users[track.uploader_id]}/>
           ))}
         </ul>
       </div>

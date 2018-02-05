@@ -7,7 +7,7 @@ json.tracks do
     json.length @track.length
     json.uploader_id @track.uploader_id
     json.genre @track.genre
-    json.created_at @track.created_at
+    json.created_at @track.created_at.strftime('%I:%M %p %d/%m/%Y')
   end
 end
 

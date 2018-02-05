@@ -1,6 +1,7 @@
 import {connect} from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import UserShow from './user_show.jsx';
+import { requestAllTracks, deleteTrack } from '../../actions/track.js';
 
 const mapStateToProps = (state, ownProps) => {
   let users = state.entities.users;
@@ -8,14 +9,25 @@ const mapStateToProps = (state, ownProps) => {
   for (let key in users) {
     if (users[key].username === ownProps.match.params.username) user = users[key];
   }
+  let tracks = state.entities.tracks;
+  let userTracks = {};
+  for (let trackKey in tracks) {
+    if (tracks[trackKey].uploader_id === user.id) {
+      userTracks[trackKey] = tracks[trackKey];
+    }
+  }
+
   return {
     user,
+    users,
+    userTracks: Object.values(userTracks),
     currentUser: state.session.currentUser
   }
 };
 
 const mapDispatchToProps = (dispatch) => ({
-
+  requestAllTracks: () => dispatch(requestAllTracks()),
+  deleteTrack: id => dispatch(deleteTrack(id)),
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(UserShow));

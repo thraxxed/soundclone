@@ -21,7 +21,7 @@
 .track {
   margin-left: 25px;
   margin-top: 25px;
-  width: 1000px;
+  width: 750px;
   display: flex;
   flex-direction: column;
 }
@@ -84,6 +84,7 @@
   background-color: #999;
   border-radius: 10px;
   height: 25px;
+
 }
 
 .tag-p {
@@ -126,5 +127,6 @@ audio {
 }
 
 .audioplayer {
-
+  background-color: white;
+  color: white;
 }

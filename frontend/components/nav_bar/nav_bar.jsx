@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default ({ currentUser, logout }) => {
-  console.log(currentUser);
   const display = currentUser ? (
     <div className="nav-buttons">
       <div className="nav-upload">
