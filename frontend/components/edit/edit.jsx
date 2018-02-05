@@ -65,7 +65,7 @@ class Edit extends React.Component {
       )
     }
     return (
-      <div className="upload-page">
+      <form onSubmit={this.handleSubmit} className="upload-page">
         <h1>Edit Track</h1>
         <br></br><br></br>
         <label>Track Image
@@ -91,8 +91,8 @@ class Edit extends React.Component {
             onChange={this.handleInput('genre')}
           />
         </label>
-        <button className="upload-submit-btn" onClick={this.handleSubmit}>Update Track</button>
-      </div>
+        <button type='submit' className="upload-submit-btn" >Update Track</button>
+      </form>
     );
   }
 }

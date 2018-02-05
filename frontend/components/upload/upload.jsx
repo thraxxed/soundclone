@@ -90,7 +90,7 @@ class Upload extends React.Component {
 
   render() {
     return (
-      <div className="upload-page">
+      <form onSubmit={this.handleSubmit} className="upload-page">
         <h1>Upload to SoundCloud</h1>
         <br></br><br></br>
         <label>Audio File
@@ -121,8 +121,8 @@ class Upload extends React.Component {
           />
         </label>
         {this.renderErrors()}
-        <button className="upload-submit-btn" onClick={this.handleSubmit}>Create Song</button>
-      </div>
+        <button type='submit' className="upload-submit-btn">Create Song</button>
+      </form>
     );
   }
 }
