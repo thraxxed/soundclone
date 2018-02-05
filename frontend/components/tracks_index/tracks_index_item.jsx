@@ -17,11 +17,20 @@ const TracksIndexItem = ({ track, user, currentUser, deleteTrack, context }) => 
         null
       }
       <div className="upload-content">
-        <img className="track-img" src={track.img_url}></img>
+
+        <Link to={`/tracks/${track.id}`}>
+          <img className="track-img" src={track.img_url}></img>
+        </Link>
+
         <div className="upload-body">
-          <h3 className="track-username">{user.username}</h3>
-          <h2 className="track-title">{track.title}</h2>
+          <Link to={`/users/${user.username}`}>
+            <h3 className="track-username">{user.username}</h3>
+          </Link>
+          <Link to={`/tracks/${track.id}`}>
+            <h2 className="track-title">{track.title}</h2>
+          </Link>
           <audio className="audioplayer" controlsList="nodownload" controls src={track.track_url}></audio>
+
           {track.uploader_id === currentUser.id ?
             (
               <div className="current-user-track-buttons">
@@ -34,10 +43,13 @@ const TracksIndexItem = ({ track, user, currentUser, deleteTrack, context }) => 
             :
             null
           }
+
         </div>
+
         <div className="track-tag">
           <p className="tag-p"># {track.genre}</p>
         </div>
+        
       </div>
     </li>
   )

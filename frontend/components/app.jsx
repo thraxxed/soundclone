@@ -11,6 +11,7 @@ import TracksIndexContainer from './tracks_index/tracks_index_container.jsx';
 import RedirectToStream from './redirect_to_stream.jsx';
 import UserShowContainer from './user/user_show_container.jsx';
 import ProfilePictureContainer from './profile_picture/profile_picture_container.jsx';
+import TrackShowContainer from './track_show/track_show_container.jsx';
 
 
 export default () => (
@@ -25,5 +26,6 @@ export default () => (
     <ProtectedRoute path="/users/:username" component={UserShowContainer}/>
     <ProtectedRoute exact path="/" component={RedirectToStream}/>
     <ProtectedRoute path="/profilepicture" component={ProfilePictureContainer}/>
+    <ProtectedRoute path="/tracks/:trackId" component={TrackShowContainer}/>
   </div>
 );
