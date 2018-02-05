@@ -34,9 +34,6 @@ class Upload extends React.Component {
     formData.append("track[genre]", this.state.genre);
     formData.append("track[track]", this.state.audioFile);
     formData.append("track[image]", this.state.imageFile);
-    console.log(this.props.createNewTrack);
-    console.log(postTrack);
-    console.log(formData);
     this.props.createNewTrack(formData)
       .then(() => this.props.history.push('/stream'));
   }
@@ -60,6 +57,7 @@ class Upload extends React.Component {
   }
 
   componentDidMount() {
+    this.props.clearErrors();
     document.title = "Upload";
     let home = document.getElementsByClassName("nav-upload");
     if (home[0]) {
@@ -75,6 +73,19 @@ class Upload extends React.Component {
       home[0].firstChild.classList.remove("white-text");
       home[0].classList.remove("home-selected");
     }
+  }
+
+  renderErrors() {
+    if (this.props.errors.length < 1) return;
+    return (
+      <ul className="form-errors">
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
   }
 
   render() {
@@ -109,6 +120,7 @@ class Upload extends React.Component {
             onChange={this.handleInput('genre')}
           />
         </label>
+        {this.renderErrors()}
         <button className="upload-submit-btn" onClick={this.handleSubmit}>Create Song</button>
       </div>
     );

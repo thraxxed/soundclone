@@ -8,7 +8,8 @@ class ProfilePicture extends React.Component {
     super(props);
     this.state = {
       imageFile: null,
-      imageUrl: this.props.currentUser.img_url
+      imageUrl: this.props.currentUser.img_url,
+      errors: []
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInput = this.handleInput.bind(this);
@@ -31,7 +32,24 @@ class ProfilePicture extends React.Component {
       .then(() => {
         this.props.currentUser.img_url = this.state.imageUrl;
         this.props.history.push('/users/' + this.props.currentUser.username);
-      })
+      },
+      (errors) => {
+        console.log(errors);
+        this.setState({errors: ["Upload Failed"]})
+      });
+  }
+
+  renderErrors() {
+    if (this.state.errors.length < 1) return;
+    return (
+      <ul className="form-errors">
+        {this.state.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
   }
 
   updateImageFile(e) {
@@ -61,6 +79,7 @@ class ProfilePicture extends React.Component {
         </label>
         <br></br>
         {this.state.imageUrl ? <img className="upload-img" src={this.state.imageUrl}/> : null}
+        {this.renderErrors()}
         <button className="upload-submit-btn" onClick={this.handleSubmit}>Upload</button>
       </div>
     );

@@ -13,7 +13,8 @@ class Api::TracksController < ApplicationController
       render :show
     else
       p @track.errors.full_messages
-      render json: @track.errors.full_messages, status: 422
+      # render json: @track.errors.full_messages, status: 422
+      render json: ["Upload Failed"]
     end
 
   end
