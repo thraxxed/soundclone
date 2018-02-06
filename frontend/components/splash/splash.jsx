@@ -17,7 +17,7 @@ class Splash extends React.Component {
           <br></br>
           <br></br>
           <br></br>
-          <h2>Connect on Soundcloud</h2>
+          <h2>Connect on Soundclone</h2>
           <br></br>
           <br></br>
           <br></br>
