@@ -1,4 +1,3 @@
-// import { postTrack, fetchAllTracks, deleteTrack } from '../utils/track_util.js';
 import * as TrackUtil from '../utils/track_util.js';
 
 export const RECEIVE_ALL_TRACKS = 'RECEIVE_ALL_TRACKS';
@@ -52,7 +51,7 @@ export const deleteTrack = trackId => dispatch => (
 );
 
 export const updateTrack = track => dispatch => (
-  TrackUtil.updateTrack(track)//.then(track => dispatch(receiveTrack(track)))
+  TrackUtil.updateTrack(track)
 );
 
 export const clearErrorsThunk = () => dispatch => dispatch(clearErrors());
