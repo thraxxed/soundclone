@@ -14,6 +14,7 @@ class TrackShow extends React.Component {
   }
 
   componentWillMount() {
+    if (this.props.track) this.props.requestComments(this.props.track.id);
     this.props.requestAllTracks();
   }
 
