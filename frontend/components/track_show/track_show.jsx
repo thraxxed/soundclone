@@ -41,7 +41,11 @@ class TrackShow extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createComment(this.state);
+    if (this.state.body) {
+      this.props.createComment(this.state);
+      this.setState({ body: "" });
+      console.log(this.state);
+    }
   }
 
   render() {
@@ -93,14 +97,19 @@ class TrackShow extends React.Component {
 
         {/* COMMENTS */}
         <div className="comment-form-container">
+          <img className="comment-form-profile-pic" src={this.props.currentUser.img_url}></img>
           <form onSubmit={this.handleSubmit} className="comment-form">
-            <input
-              className="comment-input"
-              type="text"
-              placeholder="Write a comment"
-              value={this.state.comment}
-              onChange={this.handleInput()}
-            />
+
+              <div className="comment-input-container">
+                <input
+                  className="comment-input"
+                  type="text"
+                  placeholder="Write a comment"
+                  value={this.state.body}
+                  onChange={this.handleInput()}
+                />
+              </div>
+
           </form>
         </div>
 

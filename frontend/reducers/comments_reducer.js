@@ -9,8 +9,10 @@ const commentsReducer = (state = {}, action) => {
     case RECEIVE_ALL_COMMENTS:
       return merge({}, state, action.payload.comments);
     case RECEIVE_COMMENT:
-      newState = merge({}, state);
-      newState[action.comment.id] = action.comment;
+      // console.log("look here whoadie");
+      // console.log(action.comment);
+      newState = merge({}, state, action.comment);
+      // newState[action.comment.id] = action.comment;
       return newState;
     case REMOVE_COMMENT:
       newState = merge({}, state);

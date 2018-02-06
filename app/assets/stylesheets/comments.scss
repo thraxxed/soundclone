@@ -1,0 +1,36 @@
+.comment-form-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #f2f2f2;
+  width: 50.5%;
+  margin-top: 1.5%;
+  margin-left: 9%;
+}
+
+.comment-form-profile-pic {
+  width: 42px;
+  height: 42px;
+}
+
+.comment-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 89%;
+  padding-left: 1.9%;
+}
+
+.comment-input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.comment-input {
+  border: 1px solid #ccc;
+  background: white;
+  width: 100%;
+  font-size: 14px;
+  padding: 4px;
+}
