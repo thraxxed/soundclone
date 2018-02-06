@@ -13,6 +13,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     track,
     user,
+    comments: state.entities.comments,
     tracks: state.entities.tracks,
     users: state.entities.users,
     currentUser: state.session.currentUser

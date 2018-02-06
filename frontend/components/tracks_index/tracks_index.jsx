@@ -10,6 +10,7 @@ class TracksIndex extends React.Component {
 
   componentWillMount() {
     this.props.requestAllTracks();
+    this.props.requestComments();
   }
 
   componentDidMount() {

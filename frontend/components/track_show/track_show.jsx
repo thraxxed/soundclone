@@ -21,7 +21,11 @@ class TrackShow extends React.Component {
   }
 
   componentWillMount() {
-    if (this.props.track) this.props.requestComments(this.props.track.id);
+    if (this.props.track) {
+      // console.log("hey");
+      // this.props.requestComments();
+      // console.log(this.props);
+    }
     this.props.requestAllTracks();
   }
 
@@ -31,6 +35,11 @@ class TrackShow extends React.Component {
 
   componentWillUnmount() {
     document.title = "Soundclone";
+  }
+
+  componentWillReceiveProps(newProps) {
+    // if (this.)
+    // console.log(newProps);
   }
 
   handleInput() {
@@ -44,7 +53,7 @@ class TrackShow extends React.Component {
     if (this.state.body) {
       this.props.createComment(this.state);
       this.setState({ body: "" });
-      console.log(this.state);
+      // console.log(this.state);
     }
   }
 
@@ -53,6 +62,11 @@ class TrackShow extends React.Component {
     const tracks = Object.values(this.props.tracks);
     const users = this.props.users;
     if (this.badId || !this.props.track || !this.props.user) return ( <Redirect to="/stream"/> );
+
+    const comments = this.props.comments;
+    const commentKeys = Object.keys(comments);
+    console.log(comments);
+    console.log(commentKeys);
     return (
       <div>
         <div className="trackshow-header">
@@ -95,7 +109,7 @@ class TrackShow extends React.Component {
 
         </div>
 
-        {/* COMMENTS */}
+        {/* COMMENT FORM */}
         <div className="comment-form-container">
           <img className="comment-form-profile-pic" src={this.props.currentUser.img_url}></img>
           <form onSubmit={this.handleSubmit} className="comment-form">
@@ -113,10 +127,19 @@ class TrackShow extends React.Component {
           </form>
         </div>
 
-        <h1 className="user-tracks-header">comments go here</h1>
-        <ul className="tracks-list">
+        <div className="comments-container">
+          {commentKeys.map((key) => (
+            (comments[key].track_id === this.props.track.id) ?
+              <div className="comment">
+                <span>{comments[key].body}</span>
+              </div>
+            :
+              null
+          ))}
+        </div>
 
-        </ul>
+        <h1 className="user-tracks-header">comments go here</h1>
+
       </div>
     );
   }
