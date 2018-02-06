@@ -62,11 +62,25 @@ class TrackShow extends React.Component {
               <audio className="trackshow-audioplayer" controlsList="nodownload" controls src={this.props.track.track_url}></audio>
             </div>
 
+            {(this.props.user.id === this.props.currentUser.id) ?
+                <div className="current-user-track-buttons">
+                  <Link to={`/tracks/${this.props.track.id}/edit`} className="delete-track">
+                    <span>Edit</span>
+                  </Link>
+                  <button className="delete-track" onClick={() => deleteTrack(this.props.track.id)}>Delete</button>
+                </div>
+            :
+              null
+            }
+
           </div>
+
+
 
           <div className="track-art-container">
             <img className="track-art" src={this.props.track.img_url}></img>
           </div>
+
 
         </div>
 
