@@ -1,11 +1,13 @@
 .hero-img {
   position: relative;
   margin: 0 auto;
-  width: 1240px;
-  height: 450px;
+  width: 69%;
+  // height: 450px;
+  height: 800px;
   top: 0px;
   background-repeat: no-repeat;
-  background-image: url("https://res.cloudinary.com/dbk2furpp/image/upload/v1517449915/hero_mlydvc.jpg");
+  // background-image: url("https://res.cloudinary.com/dbk2furpp/image/upload/v1517449915/hero_mlydvc.jpg");
+  background-image: url("https://res.cloudinary.com/dbk2furpp/image/upload/v1517954429/festival_dyclcv.jpg");
   border-top: 5px solid #f50;
 }
 
@@ -36,9 +38,10 @@
 
 .hero-buttons {
   position: relative;
-  left: 485px;
+  left: 36%;
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
   margin: 5px;
 }
 
