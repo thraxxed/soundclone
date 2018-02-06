@@ -20,26 +20,12 @@ class TrackShow extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentWillMount() {
-    if (this.props.track) {
-      // console.log("hey");
-      // this.props.requestComments();
-      // console.log(this.props);
-    }
-    this.props.requestAllTracks();
-  }
-
   componentDidMount() {
     if (this.props.track) document.title = this.props.track.title;
   }
 
   componentWillUnmount() {
     document.title = "Soundclone";
-  }
-
-  componentWillReceiveProps(newProps) {
-    // if (this.)
-    // console.log(newProps);
   }
 
   handleInput() {
@@ -53,7 +39,6 @@ class TrackShow extends React.Component {
     if (this.state.body) {
       this.props.createComment(this.state);
       this.setState({ body: "" });
-      // console.log(this.state);
     }
   }
 
@@ -65,8 +50,11 @@ class TrackShow extends React.Component {
 
     const comments = this.props.comments;
     const commentKeys = Object.keys(comments);
-    console.log(comments);
-    console.log(commentKeys);
+    let numComments = 0;
+    for (var i = 0; i < commentKeys.length; i++) {
+      if (comments[commentKeys[i]].track_id === this.props.track.id) numComments++;
+    }
+    console.log("this track has " + numComments);
     return (
       <div>
         <div className="trackshow-header">
@@ -127,18 +115,41 @@ class TrackShow extends React.Component {
           </form>
         </div>
 
+        {/* COMMENTS */}
         <div className="comments-container">
-          {commentKeys.map((key) => (
-            (comments[key].track_id === this.props.track.id) ?
-              <div className="comment">
-                <span>{comments[key].body}</span>
-              </div>
-            :
-              null
-          ))}
-        </div>
 
-        <h1 className="user-tracks-header">comments go here</h1>
+          <div className="uploader-comments-info">
+            <Link to={`/users/${this.props.user.username}`}>
+              <img className="uploader-comments-img" src={this.props.user.img_url}></img>
+            </Link>
+            <span className="uploader-comments-username">{this.props.user.username}</span>
+          </div>
+
+
+          <div className="comments-list">
+            <div className="num-comments">
+              <i class="fas fa-comment"></i>
+              <span>{"   "}{numComments} comments</span>
+            </div>
+            {commentKeys.map((key) => (
+              (comments[key].track_id === this.props.track.id) ?
+
+
+
+                <div key={key} className="comment">
+
+                    <img className="commenter-img" src={this.props.users[comments[key].user_id].img_url}></img>
+                    <div className="comment-contents">
+                      <span className="commenter-username">{this.props.users[comments[key].user_id].username}</span>
+                      <span>{comments[key].body}</span>
+                    </div>
+                </div>
+              :
+                null
+            ))}
+
+          </div>
+        </div>
 
       </div>
     );

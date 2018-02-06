@@ -2,9 +2,9 @@
   display: flex;
   flex-direction: row;
   background-color: #f2f2f2;
-  width: 50.5%;
+  width: 53%;
   margin-top: 1.5%;
-  margin-left: 9%;
+  margin-left: 14%;
 }
 
 .comment-form-profile-pic {
@@ -33,4 +33,70 @@
   width: 100%;
   font-size: 14px;
   padding: 4px;
+}
+
+// COMMENTS CONTAINER STARTS HERE
+
+.comments-container {
+  margin-top: 2%;
+  margin-left: 13.5%;
+  display: flex;
+  flex-direction: row;
+}
+
+.uploader-comments-img {
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  margin-bottom: 5px;
+}
+
+.uploader-comments-info {
+  text-align: center;
+}
+
+.uploader-comments-username {
+  color: #333;
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+.comments-list {
+  margin-left: 2.5%;
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+.num-comments {
+  font-size: 14px;
+  color: #999;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 0px;
+  height: 30px;
+}
+
+.comment {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  display: flex;
+  flex-direction: row;
+}
+
+.commenter-img {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+
+.comment-contents {
+  margin-left: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 12px;
+}
+
+.commenter-username {
+  color: #999;
 }
