@@ -41,7 +41,8 @@ const TracksIndexItem = ({ track, user, currentUser, deleteTrack, context }) => 
               </div>
             )
             :
-            null
+            <div className="lol">
+            </div>
           }
 
         </div>
