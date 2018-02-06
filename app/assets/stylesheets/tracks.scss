@@ -5,7 +5,7 @@
   color: #f50;
   font-weight: 700;
   letter-spacing: 1px;
-  border-bottom: 1px solid #f50;
+  border-bottom: 2px solid #f50;
   width: 85px;
 }
 
@@ -48,7 +48,7 @@
   // margin-bottom: 25px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .when-posted {
@@ -111,10 +111,12 @@
   border-radius: 3px;
   border: 1px solid lightgrey;
   text-align: center;
+  padding: 2px 20px;
 }
 
 .delete-track:hover {
-  background-color: #ccc;
+  // background-color: #ccc;
+  border: 1px solid #f50;
 }
 
 .delete-track > span {
