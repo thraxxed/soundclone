@@ -122,7 +122,9 @@ class TrackShow extends React.Component {
             <Link to={`/users/${this.props.user.username}`}>
               <img className="uploader-comments-img" src={this.props.user.img_url}></img>
             </Link>
-            <span className="uploader-comments-username">{this.props.user.username}</span>
+            <Link to={`/users/${this.props.user.username}`}>
+              <span className="uploader-comments-username">{this.props.user.username}</span>
+            </Link>
           </div>
 
 
@@ -137,10 +139,13 @@ class TrackShow extends React.Component {
 
 
                 <div key={key} className="comment">
-
-                    <img className="commenter-img" src={this.props.users[comments[key].user_id].img_url}></img>
+                    <Link to={`/users/${this.props.users[comments[key].user_id].username}`}>
+                      <img className="commenter-img" src={this.props.users[comments[key].user_id].img_url}></img>
+                    </Link>
                     <div className="comment-contents">
-                      <span className="commenter-username">{this.props.users[comments[key].user_id].username}</span>
+                      <Link to={`/users/${this.props.users[comments[key].user_id].username}`}>
+                        <span className="commenter-username">{this.props.users[comments[key].user_id].username}</span>
+                      </Link>
                       <span>{comments[key].body}</span>
                     </div>
                 </div>
