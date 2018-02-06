@@ -10,7 +10,14 @@ class TrackShow extends React.Component {
     if (!this.props.track) {
       this.badId = true;
     }
-    console.log(this.props.track);
+    if (this.props.track) {
+      this.state = {
+        body: "",
+        track_id: this.props.track.id
+      };
+    }
+    this.handleInput = this.handleInput.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentWillMount() {
@@ -24,6 +31,17 @@ class TrackShow extends React.Component {
 
   componentWillUnmount() {
     document.title = "Soundclone";
+  }
+
+  handleInput() {
+    return (e) => {
+      this.setState({ body: e.target.value });
+    };
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.createComment(this.state);
   }
 
   render() {
@@ -73,7 +91,19 @@ class TrackShow extends React.Component {
 
         </div>
 
-        <h1 className="user-tracks-header">Write a comment goes here</h1>
+        {/* COMMENTS */}
+        <div className="comment-form-container">
+          <form onSubmit={this.handleSubmit} className="comment-form">
+            <input
+              className="comment-input"
+              type="text"
+              placeholder="Write a comment"
+              value={this.state.comment}
+              onChange={this.handleInput()}
+            />
+          </form>
+        </div>
+
         <h1 className="user-tracks-header">comments go here</h1>
         <ul className="tracks-list">
 
