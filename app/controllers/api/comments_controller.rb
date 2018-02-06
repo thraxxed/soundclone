@@ -3,6 +3,8 @@ class Api::CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     @comment.user = current_user
 
+    p comment_params
+
     # TODO FIX THIS vvvvvvvvvvvv
     @comment.track_time = 0;
     # TODO ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -17,7 +19,12 @@ class Api::CommentsController < ApplicationController
   end
 
   def index
-    @comments = Comment.all
+    p "hey" if params[:track_id]
+    if params[:track_id]
+      @comments = Comment.where("track_id = #{params[:track_id]}")
+    else
+      @comments = Comment.all
+    end
     render :index
   end
 
