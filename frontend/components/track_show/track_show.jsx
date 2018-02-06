@@ -49,7 +49,7 @@ class TrackShow extends React.Component {
     if (this.badId || !this.props.track || !this.props.user) return ( <Redirect to="/stream"/> );
 
     const comments = this.props.comments;
-    const commentKeys = Object.keys(comments);
+    const commentKeys = Object.keys(comments).reverse();
     let numComments = 0;
     for (var i = 0; i < commentKeys.length; i++) {
       if (comments[commentKeys[i]].track_id === this.props.track.id) numComments++;
