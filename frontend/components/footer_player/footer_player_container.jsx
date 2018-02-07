@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import FooterPlayer from './footer_player.jsx';
 
 import { requestAllTracks } from '../../actions/track.js';
+import { receiveCurrentTrack, shiftNextTrack } from '../../actions/player.js'
 
 
 const mapStateToProps = (state) => {
@@ -11,12 +12,15 @@ const mapStateToProps = (state) => {
   return {
     currentTrack: state.player.currentTrack,
     currentUser: state.session.currentUser,
+    nextTracks: state.player.nextTracks,
     trackUser: trackUser
   }
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  requestAllTracks: () => dispatch(requestAllTracks())
+  requestAllTracks: () => dispatch(requestAllTracks()),
+  receiveCurrentTrack: (track) => dispatch(receiveCurrentTrack(track)),
+  shiftNextTrack: () => dispatch(shiftNextTrack())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(FooterPlayer);

@@ -6,6 +6,7 @@ import { updateUser } from '../../utils/session.js';
 class FooterPlayer extends React.Component {
   constructor(props) {
     super(props);
+    this.playNextTrack = this.playNextTrack.bind(this);
   }
 
   componentWillMount() {
@@ -14,14 +15,22 @@ class FooterPlayer extends React.Component {
 
   componentWillReceiveProps(newprops) {
     // if (newprops.currentTrack) console.log(newprops.currentTrack);
-    console.log("old");
-    console.log(this.props);
-    console.log("new");
-    console.log(newprops);
+    // console.log("old");
+    // console.log(this.props);
+    // console.log("new");
+    // console.log(newprops);
   }
 
   componentDidMount() {
 
+  }
+
+  playNextTrack() {
+    console.log("play the next track");
+    this.props.shiftNextTrack();
+    if (Object.keys(this.props.nextTracks).length > 1) {
+      this.props.receiveCurrentTrack(Object.values(this.props.nextTracks)[1]);
+    }
   }
 
   render() {
@@ -39,6 +48,7 @@ class FooterPlayer extends React.Component {
               controlsList="nodownload"
               controls
               autoPlay
+              onEnded={() => this.playNextTrack()}
               src={this.props.currentTrack.track_url}
             />
             :

@@ -4,7 +4,7 @@ import TracksIndex from './tracks_index.jsx';
 
 import { requestAllTracks, deleteTrack, updateTrack } from '../../actions/track.js';
 import { requestComments } from '../../actions/comment.js';
-import { receiveCurrentTrack } from '../../actions/player.js';
+import { receiveCurrentTrack, receiveNextTracks } from '../../actions/player.js';
 
 const mapStateToProps = state => {
   return {
@@ -18,7 +18,8 @@ const mapDispatchToProps = dispatch => ({
   requestAllTracks: () => dispatch(requestAllTracks()),
   deleteTrack: id => dispatch(deleteTrack(id)),
   requestComments: () => dispatch(requestComments()),
-  receiveCurrentTrack: (track) => dispatch(receiveCurrentTrack(track))
+  receiveCurrentTrack: (track) => dispatch(receiveCurrentTrack(track)),
+  receiveNextTracks: (nextTracks) => dispatch(receiveNextTracks(nextTracks))
   // updateTrack: track => dispatch(updateTrack(track))
 });
 
