@@ -34,7 +34,7 @@ class TracksIndex extends React.Component {
   componentWillReceiveProps(newProps) {
     // console.log("new props");
     // console.log(newProps);
-    if (Object.keys(newProps.tracks).length > 0) this.props.receiveNextTracks(newProps.tracks);
+    if (Object.keys(newProps.tracks).length > 0 && !this.props.currentTrack) this.props.receiveNextTracks(newProps.tracks);
   }
 
   render() {
@@ -53,6 +53,7 @@ class TracksIndex extends React.Component {
               currentUser={this.props.currentUser}
               track={track}
               user={users[track.uploader_id]}
+              currentTrack={this.props.currentTrack}
               receiveCurrentTrack={this.props.receiveCurrentTrack}
             />
           ))}

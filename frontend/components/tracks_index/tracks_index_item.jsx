@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const TracksIndexItem = ({ track, user, currentUser,
+const TracksIndexItem = ({ track, user, currentUser, currentTrack,
                            deleteTrack, context, receiveCurrentTrack }) => {
 
   return (
@@ -34,8 +34,14 @@ const TracksIndexItem = ({ track, user, currentUser,
             <Link to={`/tracks/${track.id}/show`}>
               <h2 className="track-title">{track.title}</h2>
             </Link>
-            <button className="playbutton" onClick={() => receiveCurrentTrack(track)}>
-            </button>
+            <button className="playbutton" onClick={() => receiveCurrentTrack(track)}></button>
+
+            {(currentTrack && track.id === currentTrack.id) ?
+              <h1> I am the current song! </h1>
+            :
+              null
+            }
+            
             {/*<audio className="audioplayer" controlsList="nodownload" controls src={track.track_url}></audio>*/}
 
             {track.uploader_id === currentUser.id ?
