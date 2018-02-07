@@ -55,6 +55,8 @@ class UserShow extends React.Component {
                 track={track}
                 user={this.props.users[track.uploader_id]}
                 receiveCurrentTrack={this.props.receiveCurrentTrack}
+                currentTrack={this.props.currentTrack}
+                paused={this.props.paused}
                 />
             ))}
           </ul>

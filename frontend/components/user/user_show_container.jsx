@@ -24,6 +24,8 @@ const mapStateToProps = (state, ownProps) => {
     userTrackz: userTracks,
     userTracks: Object.values(userTracks),
     currentUser: state.session.currentUser,
+    currentTrack: state.player.currentTrack,
+    paused: state.player.paused
   }
 };
 
