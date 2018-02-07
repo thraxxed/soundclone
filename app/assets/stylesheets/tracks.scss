@@ -123,6 +123,11 @@
   padding: 2px 20px;
 }
 
+.current-user-track-buttons {
+  position: relative;
+  bottom: 6%;
+}
+
 .delete-track:hover {
   border: 1px solid #f50;
 }
@@ -144,8 +149,8 @@
 }
 
 .playbutton {
-  width: 34px;
-  height: 34px;
+  width: 45px;
+  height: 45px;
   background-size: cover;
   background-image: url("https://res.cloudinary.com/dbk2furpp/image/upload/v1517965719/playbutton_hkjfwp.png");
 }

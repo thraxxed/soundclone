@@ -21,6 +21,10 @@ class FooterPlayer extends React.Component {
   }
 
   render() {
+    if (!this.props.currentTrack) return (
+      <div className="footer-player">
+      </div>
+    );
     return (
       <div className="footer-player">
         <div className="audioplayer-container">
@@ -36,6 +40,15 @@ class FooterPlayer extends React.Component {
             :
             null
           }
+        </div>
+        <div className="flex-column">
+          <div className="current-track-info">
+            <img className="footer-img" src={this.props.trackUser.img_url}></img>
+            <div className="current-track-text">
+              <span className="footer-username">{this.props.trackUser.username}</span>
+              <span className="footer-title">{this.props.currentTrack.title}</span>
+            </div>
+          </div>
         </div>
       </div>
     );

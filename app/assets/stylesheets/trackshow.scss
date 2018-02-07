@@ -30,14 +30,12 @@
   height: 89%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
 .track-show-meta {
   margin-left: 6.5%;
-  // margin-right: 10%;
-  // background-color: red;
   height: 80%;
   width: 90%;
   display: flex;
@@ -46,7 +44,7 @@
 }
 
 .artist-title {
-  // background-color: green;
+
   color: #ccc;
   width: 45%;
   display: flex;
@@ -119,6 +117,18 @@
 }
 
 .flex-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.bigger-playbutton {
+  width: 150px;
+  height: 150px;
+}
+
+.trackshow-play-container {
+  width: 85%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;

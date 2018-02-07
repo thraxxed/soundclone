@@ -29,6 +29,7 @@ export default () => (
       <ProtectedRoute exact path="/" component={RedirectToStream}/>
       <ProtectedRoute path="/profilepicture" component={ProfilePictureContainer}/>
       <ProtectedRoute exact path="/tracks/:trackId/show" component={TrackShowContainer}/>
+      
       <ProtectedRoute path="/" component={FooterPlayerContainer}/>
     </div>
   </div>

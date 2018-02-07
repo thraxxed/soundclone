@@ -82,8 +82,13 @@ class TrackShow extends React.Component {
 
             </div>
 
+            <div className="trackshow-play-container">
+              <button className="playbutton bigger-playbutton" onClick={() => this.props.receiveCurrentTrack(this.props.track)}/>
+            </div>
+
             <div className="trackshow-audioplayer-container">
-              <audio className="trackshow-audioplayer" controlsList="nodownload" controls src={this.props.track.track_url}></audio>
+              {/*<audio className="trackshow-audioplayer" controlsList="nodownload" controls src={this.props.track.track_url}></audio>*/}
+
             </div>
           </div>
 
