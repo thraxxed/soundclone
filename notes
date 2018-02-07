@@ -1,1 +1,6 @@
-working on front end auth.  started routes and made controllers for users/sessions.
+working on front end auth.  started routes and made controllers for users/sessions
+
+
+onEnded - audio element
+
+dispatch action -- replace currentSong with next song in queue.
