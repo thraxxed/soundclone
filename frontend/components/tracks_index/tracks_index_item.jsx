@@ -34,14 +34,14 @@ const TracksIndexItem = ({ track, user, currentUser, currentTrack,
             <Link to={`/tracks/${track.id}/show`}>
               <h2 className="track-title">{track.title}</h2>
             </Link>
-            <button className="playbutton" onClick={() => receiveCurrentTrack(track)}></button>
+
 
             {(currentTrack && track.id === currentTrack.id) ?
-              <h1> I am the current song! </h1>
+              <button className="pausebutton" onClick={() => receiveCurrentTrack(track)}></button>
             :
-              null
+              <button className="playbutton" onClick={() => receiveCurrentTrack(track)}></button>
             }
-            
+
             {/*<audio className="audioplayer" controlsList="nodownload" controls src={track.track_url}></audio>*/}
 
             {track.uploader_id === currentUser.id ?
