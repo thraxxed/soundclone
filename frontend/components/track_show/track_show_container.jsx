@@ -17,7 +17,9 @@ const mapStateToProps = (state, ownProps) => {
     comments: state.entities.comments,
     tracks: state.entities.tracks,
     users: state.entities.users,
-    currentUser: state.session.currentUser
+    currentUser: state.session.currentUser,
+    currentTrack: state.player.currentTrack,
+    paused: state.player.paused
   };
 };
 

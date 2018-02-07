@@ -23,7 +23,7 @@ const mapStateToProps = (state, ownProps) => {
     users,
     userTrackz: userTracks,
     userTracks: Object.values(userTracks),
-    currentUser: state.session.currentUser
+    currentUser: state.session.currentUser,
   }
 };
 

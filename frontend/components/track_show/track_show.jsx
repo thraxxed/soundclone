@@ -83,7 +83,12 @@ class TrackShow extends React.Component {
             </div>
 
             <div className="trackshow-play-container">
-              <button className="playbutton bigger-playbutton" onClick={() => this.props.receiveCurrentTrack(this.props.track)}/>
+              {(this.props.currentTrack && this.props.track.id === this.props.currentTrack.id && !this.props.paused) ?
+                <button className="pausebutton bigger-pausebutton" onClick={() => this.props.receiveCurrentTrack(this.props.track)}/>
+              :
+                <button className="playbutton bigger-playbutton" onClick={() => this.props.receiveCurrentTrack(this.props.track)}/>
+              }
+
             </div>
 
             <div className="trackshow-audioplayer-container">
