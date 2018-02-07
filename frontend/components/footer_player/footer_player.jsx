@@ -13,7 +13,11 @@ class FooterPlayer extends React.Component {
   }
 
   componentWillReceiveProps(newprops) {
-    if (newprops.currentTrack) console.log(newprops.currentTrack);
+    // if (newprops.currentTrack) console.log(newprops.currentTrack);
+    console.log("old");
+    console.log(this.props);
+    console.log("new");
+    console.log(newprops);
   }
 
   componentDidMount() {
