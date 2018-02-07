@@ -21,6 +21,7 @@ bundle.js
 bundle.js.map
 .byebug_history
 .DS_Store
+notes
 npm-debug.log
 
 # Ignore application configuration

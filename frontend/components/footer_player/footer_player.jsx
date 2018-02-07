@@ -47,7 +47,7 @@ class FooterPlayer extends React.Component {
         </div>
         <div className="flex-column">
           <div className="current-track-info">
-            <img className="footer-img" src={this.props.trackUser.img_url}></img>
+            <img className="footer-img" src={this.props.currentTrack.img_url}></img>
             <div className="current-track-text">
               <span className="footer-username">{this.props.trackUser.username}</span>
               <span className="footer-title">{this.props.currentTrack.title}</span>

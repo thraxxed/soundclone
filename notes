@@ -1,6 +1,5 @@
-working on front end auth.  started routes and made controllers for users/sessions
-
-
 onEnded - audio element
 
 dispatch action -- replace currentSong with next song in queue.
+
+-- tried to add links to footer player image/username/title, messed up the styling hard.  Links have height/width?
