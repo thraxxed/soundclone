@@ -1,5 +1,5 @@
 import merge from 'lodash/merge';
-import { RECEIVE_CURRENT_TRACK, RECEIVE_NEXT_TRACKS, SHIFT_NEXT_TRACK } from '../actions/player.js';
+import { RECEIVE_CURRENT_TRACK, RECEIVE_NEXT_TRACKS, SHIFT_NEXT_TRACK, PAUSE } from '../actions/player.js';
 
 export default (state = {}, action) => {
   Object.freeze(state);
@@ -12,6 +12,7 @@ export default (state = {}, action) => {
       }
       newState = merge({}, state);
       newState['currentTrack'] = action.currentTrack;
+      newState['paused'] = false;
 
       if (Object.keys(newState.nextTracks).length > 0) {
         delete newState.nextTracks[`${action.currentTrack.id}`];
@@ -25,10 +26,17 @@ export default (state = {}, action) => {
       return newState;
     case SHIFT_NEXT_TRACK:
 
-      console.log("remove the current track from next tracks");
+      // console.log("remove the current track from next tracks");
       newState = merge({}, state);
       delete newState.nextTracks[`${state.currentTrack.id}`];
       return newState;
+
+    case PAUSE:
+      newState = merge({}, state);
+      // newState['paused'] = !newState['paused'];
+      newState['paused'] = document.getElementById('audio-element').paused;
+      return newState;
+
     default:
       return state;
   }

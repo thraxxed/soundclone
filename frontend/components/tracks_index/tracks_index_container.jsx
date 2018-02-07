@@ -11,7 +11,8 @@ const mapStateToProps = state => {
     tracks: state.entities.tracks,
     users: state.entities.users,
     currentUser: state.session.currentUser,
-    currentTrack: state.player.currentTrack
+    currentTrack: state.player.currentTrack,
+    paused: state.player.paused
   };
 };
 
@@ -21,7 +22,6 @@ const mapDispatchToProps = dispatch => ({
   requestComments: () => dispatch(requestComments()),
   receiveCurrentTrack: (track) => dispatch(receiveCurrentTrack(track)),
   receiveNextTracks: (nextTracks) => dispatch(receiveNextTracks(nextTracks))
-  // updateTrack: track => dispatch(updateTrack(track))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TracksIndex);

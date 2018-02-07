@@ -7,6 +7,7 @@ class FooterPlayer extends React.Component {
   constructor(props) {
     super(props);
     this.playNextTrack = this.playNextTrack.bind(this);
+    this.pause = this.pause.bind(this);
   }
 
   componentWillMount() {
@@ -26,11 +27,16 @@ class FooterPlayer extends React.Component {
   }
 
   playNextTrack() {
-    console.log("play the next track");
+    // console.log("play the next track");
     this.props.shiftNextTrack();
     if (Object.keys(this.props.nextTracks).length > 0) {
       this.props.receiveCurrentTrack(Object.values(this.props.nextTracks)[0]);
     }
+  }
+
+  pause() {
+    // console.log("paused the song");
+    this.props.pause();
   }
 
   render() {
@@ -49,6 +55,8 @@ class FooterPlayer extends React.Component {
               controls
               autoPlay
               onEnded={() => this.playNextTrack()}
+              onPause={() => this.pause()}
+              onPlay={() => this.pause()}
               src={this.props.currentTrack.track_url}
             />
             :

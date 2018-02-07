@@ -55,6 +55,7 @@ class TracksIndex extends React.Component {
               user={users[track.uploader_id]}
               currentTrack={this.props.currentTrack}
               receiveCurrentTrack={this.props.receiveCurrentTrack}
+              paused={this.props.paused}
             />
           ))}
         </ul>

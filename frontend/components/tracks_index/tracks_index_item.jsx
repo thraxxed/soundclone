@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const TracksIndexItem = ({ track, user, currentUser, currentTrack,
+const TracksIndexItem = ({ track, user, currentUser, currentTrack, paused,
                            deleteTrack, context, receiveCurrentTrack }) => {
 
   return (
@@ -36,7 +36,7 @@ const TracksIndexItem = ({ track, user, currentUser, currentTrack,
             </Link>
 
 
-            {(currentTrack && track.id === currentTrack.id) ?
+            {(currentTrack && track.id === currentTrack.id && !paused) ?
               <button className="pausebutton" onClick={() => receiveCurrentTrack(track)}></button>
             :
               <button className="playbutton" onClick={() => receiveCurrentTrack(track)}></button>
