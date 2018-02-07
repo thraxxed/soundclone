@@ -30,12 +30,12 @@ const TracksIndexItem = ({ track, user, currentUser,
           <Link to={`/tracks/${track.id}/show`}>
             <h2 className="track-title">{track.title}</h2>
           </Link>
-          <button onClick={() => receiveCurrentTrack(track)}>
-            <i
+          <button className="playbutton" onClick={() => receiveCurrentTrack(track)}>
+            {/*<i
               className="fas fa-play-circle"
-            />
+            />*/}
           </button>
-          <audio className="audioplayer" controlsList="nodownload" controls src={track.track_url}></audio>
+          {/*<audio className="audioplayer" controlsList="nodownload" controls src={track.track_url}></audio>*/}
 
           {track.uploader_id === currentUser.id ?
             (
