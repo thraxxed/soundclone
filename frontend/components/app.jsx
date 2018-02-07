@@ -18,11 +18,11 @@ import FooterPlayerContainer from './footer_player/footer_player_container.jsx';
 export default () => (
   <div>
     <ProtectedRoute path="/" component={NavBarContainer}/>
+    <AuthRoute path="/" component={SplashContainer}/>
+    <AuthRoute path="/login" component={LoginContainer}/>
+    <AuthRoute path="/signup" component={SignupContainer}/>
     <div className="main">
       <ProtectedRoute exact path="/stream" component={TracksIndexContainer}/>
-      <AuthRoute path="/" component={SplashContainer}/>
-      <AuthRoute path="/signup" component={SignupContainer}/>
-      <AuthRoute path="/login" component={LoginContainer}/>
       <ProtectedRoute path="/upload" component={UploadContainer}/>
       <ProtectedRoute path="/tracks/:trackId/edit" component={EditContainer}/>
       <ProtectedRoute path="/users/:username" component={UserShowContainer}/>
