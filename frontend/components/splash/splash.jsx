@@ -6,6 +6,10 @@ class Splash extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    const main = document.getElementById('main');
+  }
+
   render() {
     return (
       <div  className="hero-img">

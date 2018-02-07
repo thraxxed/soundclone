@@ -16,18 +16,24 @@
   flex-direction: column;
   justify-content: space-around;
   overflow: scroll;
+  margin-bottom: 60px;
 }
+
 
 .track {
   margin-left: 25px;
   margin-top: 25px;
-  width: 750px;
+  width: 86.55%;
   display: flex;
   flex-direction: column;
+  position: relative;
+  box-shadow: 0 0 10px 1px lightgrey;
 }
 
 .upload-info {
-  margin-bottom: 10px;
+  margin-left: 25px;
+  margin-top: 25px;
+  margin-bottom: -10px;
   display: flex;
   flex-direction: row;
 }
@@ -84,6 +90,9 @@
   background-color: #999;
   border-radius: 10px;
   height: 25px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
 
 .tag-p {
@@ -114,6 +123,11 @@
   padding: 2px 20px;
 }
 
+.current-user-track-buttons {
+  position: relative;
+  bottom: 6%;
+}
+
 .delete-track:hover {
   border: 1px solid #f50;
 }
@@ -123,7 +137,7 @@
 }
 
 .audioplayer {
-  width: 500px;
+  width: 100%;
   background-color: white;
   color: white;
 }
@@ -131,4 +145,11 @@
 .lol {
   // IMPORTANT!!!!! DO NOT DELETE
   height: 30%;
+}
+
+.playbutton {
+  width: 45px;
+  height: 45px;
+  background-size: cover;
+  background-image: url("https://res.cloudinary.com/dbk2furpp/image/upload/v1517965719/playbutton_hkjfwp.png");
 }

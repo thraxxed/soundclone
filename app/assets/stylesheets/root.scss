@@ -6,6 +6,12 @@
   font-family: "Open Sans";
 }
 
+.main {
+  position: absolute;
+  top: 46px;
+  width: 100%;
+}
+
 .btn {
   letter-spacing: 1px;
 }
@@ -31,7 +37,9 @@ a {
 
 
 .nav-bar {
-  position: sticky;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
   width: 100%;
   height: 46px;
   display: flex;

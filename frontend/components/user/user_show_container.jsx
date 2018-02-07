@@ -2,6 +2,7 @@ import {connect} from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import UserShow from './user_show.jsx';
 import { requestAllTracks, deleteTrack } from '../../actions/track.js';
+import { receiveCurrentTrack } from '../../actions/player.js';
 
 const mapStateToProps = (state, ownProps) => {
   let users = state.entities.users;
@@ -28,6 +29,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => ({
   requestAllTracks: () => dispatch(requestAllTracks()),
   deleteTrack: id => dispatch(deleteTrack(id)),
+  receiveCurrentTrack: (track) => dispatch(receiveCurrentTrack(track))
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(UserShow));

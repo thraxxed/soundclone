@@ -12,20 +12,25 @@ import RedirectToStream from './redirect_to_stream.jsx';
 import UserShowContainer from './user/user_show_container.jsx';
 import ProfilePictureContainer from './profile_picture/profile_picture_container.jsx';
 import TrackShowContainer from './track_show/track_show_container.jsx';
+import FooterPlayerContainer from './footer_player/footer_player_container.jsx';
 
 
 export default () => (
-  <div className="main">
+  <div>
     <ProtectedRoute path="/" component={NavBarContainer}/>
-    <ProtectedRoute exact path="/stream" component={TracksIndexContainer}/>
     <AuthRoute path="/" component={SplashContainer}/>
-    <AuthRoute path="/signup" component={SignupContainer}/>
     <AuthRoute path="/login" component={LoginContainer}/>
-    <ProtectedRoute path="/upload" component={UploadContainer}/>
-    <ProtectedRoute path="/tracks/:trackId/edit" component={EditContainer}/>
-    <ProtectedRoute path="/users/:username" component={UserShowContainer}/>
-    <ProtectedRoute exact path="/" component={RedirectToStream}/>
-    <ProtectedRoute path="/profilepicture" component={ProfilePictureContainer}/>
-    <ProtectedRoute exact path="/tracks/:trackId/show" component={TrackShowContainer}/>
+    <AuthRoute path="/signup" component={SignupContainer}/>
+    <div className="main">
+      <ProtectedRoute exact path="/stream" component={TracksIndexContainer}/>
+      <ProtectedRoute path="/upload" component={UploadContainer}/>
+      <ProtectedRoute path="/tracks/:trackId/edit" component={EditContainer}/>
+      <ProtectedRoute path="/users/:username" component={UserShowContainer}/>
+      <ProtectedRoute exact path="/" component={RedirectToStream}/>
+      <ProtectedRoute path="/profilepicture" component={ProfilePictureContainer}/>
+      <ProtectedRoute exact path="/tracks/:trackId/show" component={TrackShowContainer}/>
+      
+      <ProtectedRoute path="/" component={FooterPlayerContainer}/>
+    </div>
   </div>
 );

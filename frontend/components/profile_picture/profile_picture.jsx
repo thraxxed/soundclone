@@ -27,14 +27,12 @@ class ProfilePicture extends React.Component {
     let formData = new FormData();
     formData.append("user[avatar]", this.state.imageFile);
     formData.append("user[id]", this.props.currentUser.id)
-    console.log(formData);
     updateUser(formData)
       .then(() => {
         this.props.currentUser.img_url = this.state.imageUrl;
         this.props.history.push('/users/' + this.props.currentUser.username);
       },
       (errors) => {
-        console.log(errors);
         this.setState({errors: ["Upload Failed"]})
       });
   }

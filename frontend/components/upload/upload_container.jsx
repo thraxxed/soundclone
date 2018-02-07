@@ -5,7 +5,6 @@ import Upload from './upload.jsx';
 import { createNewTrack, clearErrorsThunk } from '../../actions/track.js';
 
 const mapStateToProps = (state) => {
-  console.log(state.errors);
   return {
     currentUser: state.session.currentUser,
     errors: state.errors.tracks

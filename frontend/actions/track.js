@@ -41,7 +41,6 @@ export const requestTrack = id => dispatch => {
 
 export const createNewTrack = formTrack => dispatch => {
   return TrackUtil.postTrack(formTrack).then(null, (errors) => {
-    console.log(errors);
     dispatch(receiveErrors(errors.responseJSON))
   });
 };

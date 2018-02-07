@@ -54,7 +54,6 @@ class TrackShow extends React.Component {
     for (var i = 0; i < commentKeys.length; i++) {
       if (comments[commentKeys[i]].track_id === this.props.track.id) numComments++;
     }
-    console.log("this track has " + numComments);
     return (
       <div>
         <div className="trackshow-header">
@@ -83,8 +82,13 @@ class TrackShow extends React.Component {
 
             </div>
 
+            <div className="trackshow-play-container">
+              <button className="playbutton bigger-playbutton" onClick={() => this.props.receiveCurrentTrack(this.props.track)}/>
+            </div>
+
             <div className="trackshow-audioplayer-container">
-              <audio className="trackshow-audioplayer" controlsList="nodownload" controls src={this.props.track.track_url}></audio>
+              {/*<audio className="trackshow-audioplayer" controlsList="nodownload" controls src={this.props.track.track_url}></audio>*/}
+
             </div>
           </div>
 
