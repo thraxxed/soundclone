@@ -32,7 +32,6 @@ class TracksIndex extends React.Component {
   }
 
   render() {
-    // console.log(this.props.receiveCurrentTrack);
     const tracks = Object.values(this.props.tracks);
     const users = this.props.users;
     if (tracks.length === 0) return ( <h1>Loading...</h1> );

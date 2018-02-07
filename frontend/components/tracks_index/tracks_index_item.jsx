@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 const TracksIndexItem = ({ track, user, currentUser,
                            deleteTrack, context, receiveCurrentTrack }) => {
-  console.log(receiveCurrentTrack);
   return (
     <li className="track">
       { (context === "stream") ?
@@ -31,9 +30,6 @@ const TracksIndexItem = ({ track, user, currentUser,
             <h2 className="track-title">{track.title}</h2>
           </Link>
           <button className="playbutton" onClick={() => receiveCurrentTrack(track)}>
-            {/*<i
-              className="fas fa-play-circle"
-            />*/}
           </button>
           {/*<audio className="audioplayer" controlsList="nodownload" controls src={track.track_url}></audio>*/}
 

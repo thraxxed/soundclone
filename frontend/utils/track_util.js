@@ -31,7 +31,6 @@ export const deleteTrack = id => (
 );
 
 export const updateTrack = track => {
-  console.log(track);
   return $.ajax({
     url: 'api/tracks/' + track.id,
     method: 'PATCH',

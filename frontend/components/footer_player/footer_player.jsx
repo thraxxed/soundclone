@@ -6,7 +6,6 @@ import { updateUser } from '../../utils/session.js';
 class FooterPlayer extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props);
   }
 
   componentWillMount() {
@@ -14,7 +13,7 @@ class FooterPlayer extends React.Component {
   }
 
   componentWillReceiveProps(newprops) {
-    if (newprops.tracks) console.log(newprops.tracks);
+    if (newprops.currentTrack) console.log(newprops.currentTrack);
   }
 
   componentDidMount() {
@@ -24,12 +23,20 @@ class FooterPlayer extends React.Component {
   render() {
     return (
       <div className="footer-player">
-        <h1>FOOTER PLAYER</h1>
-        {this.props.currentTrack ?
-        <h1>Song Loaded! {this.props.currentTrack.title}</h1>
-          :
-        <h1>No song loaded yet!</h1>
-        }
+        <div className="audioplayer-container">
+          {this.props.currentTrack ?
+            <audio
+              id="audio-element"
+              className="audioplayer"
+              controlsList="nodownload"
+              controls
+              autoPlay
+              src={this.props.currentTrack.track_url}
+            />
+            :
+            null
+          }
+        </div>
       </div>
     );
   }

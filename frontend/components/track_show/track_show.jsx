@@ -54,7 +54,6 @@ class TrackShow extends React.Component {
     for (var i = 0; i < commentKeys.length; i++) {
       if (comments[commentKeys[i]].track_id === this.props.track.id) numComments++;
     }
-    console.log("this track has " + numComments);
     return (
       <div>
         <div className="trackshow-header">
