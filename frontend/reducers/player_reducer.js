@@ -12,15 +12,19 @@ export default (state = {}, action) => {
       }
       newState = merge({}, state);
       newState['currentTrack'] = action.currentTrack;
-      // console.log("new state:");
-      // console.log(newState);
+
+      if (Object.keys(newState.nextTracks).length > 0) {
+        delete newState.nextTracks[`${action.currentTrack.id}`];
+      }
+
       return newState;
-      // return action;
+
     case RECEIVE_NEXT_TRACKS:
       newState = merge({}, state, { nextTracks: action.nextTracks } );
-      // newState['nextTracks'] = action.nextTracks;
+
       return newState;
     case SHIFT_NEXT_TRACK:
+
       console.log("remove the current track from next tracks");
       newState = merge({}, state);
       delete newState.nextTracks[`${state.currentTrack.id}`];

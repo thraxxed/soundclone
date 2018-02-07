@@ -28,8 +28,8 @@ class FooterPlayer extends React.Component {
   playNextTrack() {
     console.log("play the next track");
     this.props.shiftNextTrack();
-    if (Object.keys(this.props.nextTracks).length > 1) {
-      this.props.receiveCurrentTrack(Object.values(this.props.nextTracks)[1]);
+    if (Object.keys(this.props.nextTracks).length > 0) {
+      this.props.receiveCurrentTrack(Object.values(this.props.nextTracks)[0]);
     }
   }
 

@@ -16,6 +16,12 @@ class UserShow extends React.Component {
     document.title = 'Soundclone';
   }
 
+  componentWillReceiveProps(newProps) {
+    // console.log("new props");
+    // console.log(newProps);
+    // if (Object.keys(newProps.userTrackz).length > 0) this.props.receiveNextTracks(newProps.userTrackz);
+  }
+
   render() {
     if (!this.props.user) return (<p>Loading...</p>);
     if (!this.props.user) return (<Redirect to="/"/>)
