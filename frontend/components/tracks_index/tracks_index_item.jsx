@@ -5,6 +5,7 @@ import FaPlayCircle from 'react-icons/lib/fa/play-circle';
 import FaPauseCircle from 'react-icons/lib/fa/pause-circle';
 
 
+
 const TracksIndexItem = ({ track, user, currentUser, currentTrack, paused,
                            deleteTrack, context, receiveCurrentTrack }) => {
 

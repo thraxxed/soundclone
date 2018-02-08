@@ -15,7 +15,7 @@ class FooterPlayer extends React.Component {
   }
 
   componentWillReceiveProps(newprops) {
-
+    // if (newprops.nextTracksArr) console.log(newprops.nextTracksArr);
   }
 
   componentDidMount() {
@@ -25,8 +25,12 @@ class FooterPlayer extends React.Component {
   playNextTrack() {
 
     this.props.shiftNextTrack();
-    if (Object.keys(this.props.nextTracks).length > 0) {
-      this.props.receiveCurrentTrack(Object.values(this.props.nextTracks)[0]);
+    // if (Object.keys(this.props.nextTracks).length > 0) {
+    //   this.props.receiveCurrentTrack(Object.values(this.props.nextTracks)[0]);
+    // }
+    // console.log(this.props.nextTracksArr);
+    if (this.props.nextTracksArr && this.props.nextTracksArr.length > 0) {
+      this.props.receiveCurrentTrack(this.props.nextTracksArr[0]);
     }
   }
 
