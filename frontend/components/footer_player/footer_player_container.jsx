@@ -12,7 +12,9 @@ const mapStateToProps = (state) => {
   return {
     currentTrack: state.player.currentTrack,
     currentUser: state.session.currentUser,
-    nextTracks: state.player.nextTracks,
+    // nextTracks: state.player.nextTracks,
+    // nextTracksArr: (state.player.nextTracks ? Object.values(state.player.nextTracks) : undefined),
+    nextTracksArr: state.player.nextTracksArr,
     trackUser: trackUser
   }
 };

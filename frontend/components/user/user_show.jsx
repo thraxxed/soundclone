@@ -19,7 +19,19 @@ class UserShow extends React.Component {
   componentWillReceiveProps(newProps) {
     // console.log("new props");
     // console.log(newProps);
-    // if (Object.keys(newProps.userTrackz).length > 0) this.props.receiveNextTracks(newProps.userTrackz);
+    let newTracks = {};
+    if (Object.keys(newProps.userTrackz).length > 0 && newProps.currentTrack) {
+      let newTrackValues = Object.values(newProps.userTrackz);
+      for (var i = 0; i < newTrackValues.length; i++) {
+        if (newTrackValues[i].id > newProps.currentTrack.id) {
+          newTracks[newTrackValues[i].id] = newTrackValues[i];
+        }
+      }
+    }
+
+
+    if (Object.keys(newProps.userTrackz).length > 0 && !this.props.currentTrack) //this.props.receiveNextTracks(newProps.userTrackz);
+    this.props.receiveNextTracks(newTracks);
   }
 
   render() {

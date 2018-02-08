@@ -14,21 +14,38 @@ export default (state = {}, action) => {
       newState['currentTrack'] = action.currentTrack;
       newState['paused'] = false;
 
-      if (Object.keys(newState.nextTracks).length > 0) {
-        delete newState.nextTracks[`${action.currentTrack.id}`];
+      // console.log(newState.currentTrack.title);
+
+
+      if (newState.nextTracksArr) {
+        for (var i = 0; i < newState.nextTracksArr.length; i++) {
+          if (newState.nextTracksArr[i].id === newState.currentTrack.id) {
+            newState.nextTracksArr = newState.nextTracksArr.slice(0, i).concat(newState.nextTracksArr.slice(i+1));
+          }
+        }
       }
+
+      // console.log(newState.nextTracksArr);
 
       return newState;
 
     case RECEIVE_NEXT_TRACKS:
-      newState = merge({}, state, { nextTracks: action.nextTracks } );
 
+
+      newState = merge({}, state, { nextTracksArr: Object.values(action.nextTracks) } );
+      // console.log("next tracks array");
+      // console.log(newState.nextTracksArr);
       return newState;
+
     case SHIFT_NEXT_TRACK:
 
       // console.log("remove the current track from next tracks");
       newState = merge({}, state);
-      delete newState.nextTracks[`${state.currentTrack.id}`];
+      // delete newState.nextTracks[`${state.currentTrack.id}`];
+      newState.nextTracksArr = newState.nextTracksArr.slice(1)
+      if (newState.nextTracksArr.length === 0) {
+        console.log("hey");
+      }
       return newState;
 
     case PAUSE:

@@ -32,7 +32,16 @@ class TracksIndex extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    if (Object.keys(newProps.tracks).length > 0 && !this.props.currentTrack) this.props.receiveNextTracks(newProps.tracks);
+    let newTracks = {};
+    if (Object.keys(newProps.tracks).length > 0 && newProps.currentTrack) {
+      let newTrackValues = Object.values(newProps.tracks);
+      for (var i = 0; i < newTrackValues.length; i++) {
+        if (newTrackValues[i].id > newProps.currentTrack.id) {
+          newTracks[newTrackValues[i].id] = newTrackValues[i];
+        }
+      }
+    }
+    if (Object.keys(newProps.tracks).length > 0 && !this.props.currentTrack) this.props.receiveNextTracks(newTracks);
   }
 
   render() {
