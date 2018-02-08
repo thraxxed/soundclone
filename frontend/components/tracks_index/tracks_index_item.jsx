@@ -1,6 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import FaPlayCircle from 'react-icons/lib/fa/play-circle';
+import FaPauseCircle from 'react-icons/lib/fa/pause-circle';
+
+import * as FontAwesome from 'react-icons/lib/fa';
+
+// import FontAwesome from 'react-fontawesome';
+
 const TracksIndexItem = ({ track, user, currentUser, currentTrack, paused,
                            deleteTrack, context, receiveCurrentTrack }) => {
 
@@ -37,12 +44,12 @@ const TracksIndexItem = ({ track, user, currentUser, currentTrack, paused,
 
 
             {(currentTrack && track.id === currentTrack.id && !paused) ?
-              <button className="pausebutton" onClick={() => receiveCurrentTrack(track)}></button>
+              <FaPauseCircle className="fa-play" onClick={() => receiveCurrentTrack(track)}/>
             :
-              <button className="playbutton" onClick={() => receiveCurrentTrack(track)}></button>
+              <FaPlayCircle className="fa-play" onClick={() => receiveCurrentTrack(track)}/>
             }
 
-            {/*<audio className="audioplayer" controlsList="nodownload" controls src={track.track_url}></audio>*/}
+
 
             {track.uploader_id === currentUser.id ?
               (

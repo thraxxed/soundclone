@@ -2,6 +2,10 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
+import FaPlayCircle from 'react-icons/lib/fa/play-circle';
+// import FaPlay from 'react-icons/lib/fa/play';
+import FaPauseCircle from 'react-icons/lib/fa/pause-circle';
+// import FaPause from 'react-icons/lib/fa/pause';
 
 class TrackShow extends React.Component {
   constructor(props) {
@@ -84,9 +88,9 @@ class TrackShow extends React.Component {
 
             <div className="trackshow-play-container">
               {(this.props.currentTrack && this.props.track.id === this.props.currentTrack.id && !this.props.paused) ?
-                <button className="pausebutton bigger-pausebutton" onClick={() => this.props.receiveCurrentTrack(this.props.track)}/>
+                <FaPauseCircle className="fa-play-big" onClick={() => this.props.receiveCurrentTrack(this.props.track)}/>
               :
-                <button className="playbutton bigger-playbutton" onClick={() => this.props.receiveCurrentTrack(this.props.track)}/>
+                <FaPlayCircle className="fa-play-big" onClick={() => this.props.receiveCurrentTrack(this.props.track)}/>
               }
 
             </div>

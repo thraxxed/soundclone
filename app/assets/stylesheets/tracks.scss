@@ -48,6 +48,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  height: 160px;
 }
 
 .upload-body {
@@ -114,8 +115,7 @@
 .delete-track {
   position: relative;
   width: 50px;
-  height: 20%;
-  margin-top: 40px;
+  height: 15px;
   margin-right: 2.5px;
   font-size: 10px;
   border-radius: 3px;
@@ -126,7 +126,10 @@
 
 .current-user-track-buttons {
   position: relative;
-  bottom: 6%;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 .delete-track:hover {
@@ -134,7 +137,7 @@
 }
 
 .delete-track > span {
-  padding: 15px;
+  // padding: 15px;
 }
 
 .audioplayer {
@@ -152,7 +155,6 @@
   width: 45px;
   height: 45px;
   background-size: cover;
-  // background-image: url("https://res.cloudinary.com/dbk2furpp/image/upload/v1517965719/playbutton_hkjfwp.png");
   background-image: url("https://res.cloudinary.com/dbk2furpp/image/upload/v1518042240/newplay_sxob3a.png");
 }
 
@@ -160,6 +162,10 @@
   width: 45px;
   height: 45px;
   background-size: cover;
-  // background-image: url("https://res.cloudinary.com/dbk2furpp/image/upload/v1518032123/button_player_pause_ke5cz9.png");
   background-image: url("https://res.cloudinary.com/dbk2furpp/image/upload/v1518042240/newpause_wpvesi.png");
+}
+
+.fa-play {
+  font-size: 48px;
+  color: #f50;
 }
