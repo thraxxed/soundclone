@@ -15,11 +15,7 @@ class FooterPlayer extends React.Component {
   }
 
   componentWillReceiveProps(newprops) {
-    // if (newprops.currentTrack) console.log(newprops.currentTrack);
-    // console.log("old");
-    // console.log(this.props);
-    // console.log("new");
-    // console.log(newprops);
+
   }
 
   componentDidMount() {
@@ -27,7 +23,7 @@ class FooterPlayer extends React.Component {
   }
 
   playNextTrack() {
-    // console.log("play the next track");
+
     this.props.shiftNextTrack();
     if (Object.keys(this.props.nextTracks).length > 0) {
       this.props.receiveCurrentTrack(Object.values(this.props.nextTracks)[0]);
@@ -35,7 +31,7 @@ class FooterPlayer extends React.Component {
   }
 
   pause() {
-    // console.log("paused the song");
+
     this.props.pause();
   }
 

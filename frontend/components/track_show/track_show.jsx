@@ -142,7 +142,7 @@ class TrackShow extends React.Component {
 
           <div className="comments-list">
             <div className="num-comments">
-              <i class="fas fa-comment"></i>
+              <i className="fas fa-comment"></i>
               <span>{"   "}{numComments} comments</span>
             </div>
             {commentKeys.map((key) => (
