@@ -32,8 +32,6 @@ class TracksIndex extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    // console.log("new props");
-    // console.log(newProps);
     if (Object.keys(newProps.tracks).length > 0 && !this.props.currentTrack) this.props.receiveNextTracks(newProps.tracks);
   }
 
@@ -59,6 +57,8 @@ class TracksIndex extends React.Component {
             />
           ))}
         </ul>
+        <br></br>
+        <div className=""></div>
       </div>
     );
   }

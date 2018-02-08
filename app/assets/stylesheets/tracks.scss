@@ -16,8 +16,8 @@
   flex-direction: column;
   justify-content: space-around;
   overflow: scroll;
-  margin-bottom: 60px;
-  // margin-bottom: 85px;
+  // margin-bottom: 150px;
+  margin-bottom: 65px;
 }
 
 
@@ -29,6 +29,12 @@
   flex-direction: column;
   position: relative;
   box-shadow: 0 0 10px 1px lightgrey;
+
+  // margin-bottom: 10px;
+}
+
+.track:last-child {
+  margin-bottom: 10px;
 }
 
 .upload-info {
@@ -168,4 +174,11 @@
 .fa-play {
   font-size: 48px;
   color: #f50;
+}
+
+.empty-div {
+  background-color: black;
+  border: 1px solid black;
+  height: 15px;
+  margin-bottom: 50px;
 }
