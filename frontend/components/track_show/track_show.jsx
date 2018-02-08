@@ -3,9 +3,9 @@ import { Route, Redirect } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 import FaPlayCircle from 'react-icons/lib/fa/play-circle';
-// import FaPlay from 'react-icons/lib/fa/play';
+
 import FaPauseCircle from 'react-icons/lib/fa/pause-circle';
-// import FaPause from 'react-icons/lib/fa/pause';
+
 
 class TrackShow extends React.Component {
   constructor(props) {

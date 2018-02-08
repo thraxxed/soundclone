@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom';
 import FaPlayCircle from 'react-icons/lib/fa/play-circle';
 import FaPauseCircle from 'react-icons/lib/fa/pause-circle';
 
-import * as FontAwesome from 'react-icons/lib/fa';
-
-// import FontAwesome from 'react-fontawesome';
 
 const TracksIndexItem = ({ track, user, currentUser, currentTrack, paused,
                            deleteTrack, context, receiveCurrentTrack }) => {

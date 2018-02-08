@@ -1,13 +1,15 @@
 .hero-img {
   position: relative;
   margin: 0 auto;
-  width: 69%;
-  // height: 450px;
-  height: 800px;
+  width: 86%;
+  height: 425px;
+  // height: 400px;
   top: 0px;
-  background-repeat: no-repeat;
-  // background-image: url("https://res.cloudinary.com/dbk2furpp/image/upload/v1517449915/hero_mlydvc.jpg");
-  background-image: url("https://res.cloudinary.com/dbk2furpp/image/upload/v1517954429/festival_dyclcv.jpg");
+  // background-repeat: space;
+  background-image: url("https://res.cloudinary.com/dbk2furpp/image/upload/v1517449915/hero_mlydvc.jpg");
+  // background-image: url("https://res.cloudinary.com/dbk2furpp/image/upload/v1517954429/festival_dyclcv.jpg");
+  // background-image: url("https://78.media.tumblr.com/b36d2a55a8c1bfe4aca580b1d479e163/tumblr_ov7v9mnk0w1qjk2u9o1_1280.jpg");
+  // background-image: url("http://highsierramusic.com/wp-content/uploads/layerslider/new-homepage-slider/slider.jpg");
   border-top: 5px solid #f50;
 }
 
@@ -88,4 +90,48 @@
   border: 1px solid #f50;
   border-radius: 3px;
   font-size: 15px;
+}
+
+// .splash-flex {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+// }
+
+.splash-header {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.splash-tracks-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-left: 7.3%;
+  margin-right: 7.3%;
+}
+
+.splash-track-img {
+  width: 165px;
+  height: 165px;
+  border: 1px solid lightgrey;
+}
+
+.splash-track-title {
+  color: #333;
+  font-size: 14px;
+}
+
+.splash-track-username {
+  color: #999;
+  font-size: 12px;
+}
+
+.splash-track-info {
+  display: flex;
+  flex-direction: column;
 }
