@@ -1,7 +1,7 @@
 .upload-page {
   position: relative;
   margin: 0 auto;
-  top: 50px;
+  top: 35px;
   width: 500px;
   height: 600px;
   display: flex;
@@ -10,6 +10,8 @@
   justify-content: space-around;
   border: 1px solid lightgray;
   // padding: 30px;
+  margin-bottom: 65px;
+  // margin-top: 10px;
 }
 
 .upload-page > h1 {
