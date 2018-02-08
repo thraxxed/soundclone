@@ -62,28 +62,37 @@ class UserShow extends React.Component {
         </div>
         <h1 className="user-tracks-header">Tracks</h1>
           {this.props.userTracks.length > 0 ?
-            <ul className="tracks-list">
-              {this.props.userTracks.map(track => (
-                <TracksIndexItem
-                  key={track.id}
-                  context="userShow"
-                  deleteTrack={this.props.deleteTrack}
-                  currentUser={this.props.currentUser}
-                  track={track}
-                  user={this.props.users[track.uploader_id]}
-                  receiveCurrentTrack={this.props.receiveCurrentTrack}
-                  currentTrack={this.props.currentTrack}
-                  paused={this.props.paused}
-                  />
-              ))}
-            </ul>
+              <ul className="tracks-list">
+                {this.props.userTracks.map(track => (
+                  <TracksIndexItem
+                    key={track.id}
+                    context="userShow"
+                    deleteTrack={this.props.deleteTrack}
+                    currentUser={this.props.currentUser}
+                    track={track}
+                    user={this.props.users[track.uploader_id]}
+                    receiveCurrentTrack={this.props.receiveCurrentTrack}
+                    currentTrack={this.props.currentTrack}
+                    paused={this.props.paused}
+                    />
+                ))}
+              </ul>
             :
-            <div className="no-tracks">
-              <span className="seems-quiet">Seems a little quiet over here.</span><br></br><br></br>
-              <Link to="/upload">
-                <span className="upload-link">Upload a track to share it with the world.</span>
-              </Link>
-            </div>
+              <div className="no-tracks">
+              {(this.props.user.id === this.props.currentUser.id) ?
+                  <div>
+                  <span className="seems-quiet">Seems a little quiet over here.</span><br></br><br></br>
+                  <Link to="/upload">
+                    <span className="upload-link">Upload a track to share it with the world.</span>
+                  </Link>
+                  </div>
+                :
+                  <div>
+                  <span className="seems-quiet">Nothing to hear here.</span><br></br><br></br>
+                  <span className="follow-username">Follow {this.props.user.username} for updates on sounds they share in the future.</span>
+                  </div>
+              }
+              </div>
             }
       </div>
     )
