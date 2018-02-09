@@ -12,3 +12,6 @@ Technologies used:
 # Features
 
 ## User Authentication
+
+Users may create new accounts, with their passwords stored securely using BCrypt encryption.  They may also upload
+a personal profile picture.
