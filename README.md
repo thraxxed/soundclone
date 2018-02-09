@@ -7,7 +7,10 @@ Technologies used:
   * Ruby on Rails back-end
   * React/Redux front-end
   * PostgreSQL database
-  * Amazon Web Services for image/audio Hosting
+  * Amazon Web Services for image/audio hosting
+  * jBuilder
+  * Heroku
+  * SCSS
 
 # Features
 
@@ -23,7 +26,8 @@ to avoid making a new account.
 
 Once logged in, Users are shown a collection of the most recently uploaded tracks.  Any tracks which
 were uploaded by the logged-in user will also display buttons allowing the user to edit the track's information,
-as well as to delete the track.
+as well as to delete the track.  Each track also contains links to that track's specific page, as well as a link
+to the uploader's personal page.
 
 ![Session](https://i.imgur.com/eNH6pLc.png)
 
@@ -33,4 +37,7 @@ Users may Upload their own songs, with support for also assigning the song a uni
 Only valid .mp3 files are accepted for audio.  On a user's specific page, the tracks which they have personally
 uploaded may be seen.
 
-##
+## Comments
+
+On an individual track's page, users may comment on the song, and see the list of comments uploaded in
+real-time.  
