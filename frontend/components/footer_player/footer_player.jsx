@@ -8,6 +8,7 @@ class FooterPlayer extends React.Component {
     super(props);
     this.playNextTrack = this.playNextTrack.bind(this);
     this.pause = this.pause.bind(this);
+    
   }
 
   componentWillMount() {
@@ -19,22 +20,7 @@ class FooterPlayer extends React.Component {
   }
 
   componentDidMount() {
-    document.body.onkeyup = function(e) {
-      $(document).on("keydown", (event) => {
-        if (event.which == 32) {
-          let audioEl = document.getElementById('audio-element');
-          if (audioEl) {
-            if (audioEl.paused) {
-              console.log("play audio");
-              audioEl.play();
-            } else {
-              console.log("pause audio");
-              audioEl.pause();
-            }
-          }
-        }
-      })
-    }
+
   }
 
   playNextTrack() {
