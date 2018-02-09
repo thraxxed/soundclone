@@ -29,7 +29,6 @@ export default (state = {}, action) => {
     case SHIFT_NEXT_TRACK:
       newState = merge({}, state);
       newState.lastTrack = newState.currentTrack;
-      console.log(newState.lastTrack);
       newState.nextTracksArr = newState.nextTracksArr.slice(1)
       return newState;
 
