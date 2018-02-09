@@ -31,7 +31,7 @@ were uploaded by the logged-in user will also display buttons allowing the user 
 as well as to delete the track.  Each track also contains links to that track's specific page, as well as a link
 to the uploader's personal page.
 
-![Session](https://i.imgur.com/eNH6pLc.png)
+![Session](https://i.imgur.com/soEUKQJ.png?1)
 
 ## Track Upload
 
