@@ -21,7 +21,7 @@ class UserShow extends React.Component {
     if (Object.keys(newProps.userTrackz).length > 0 && newProps.currentTrack) {
       let newTrackValues = Object.values(newProps.userTrackz);
       for (var i = 0; i < newTrackValues.length; i++) {
-        if (newTrackValues[i].id > newProps.currentTrack.id) {
+        if (newTrackValues[i].id < newProps.currentTrack.id) {
           newTracks[newTrackValues[i].id] = newTrackValues[i];
         }
       }
@@ -54,7 +54,7 @@ class UserShow extends React.Component {
         <h1 className="user-tracks-header">Tracks</h1>
           {this.props.userTracks.length > 0 ?
               <ul className="tracks-list">
-                {this.props.userTracks.map(track => (
+                {this.props.userTracks.reverse().map(track => (
                   <TracksIndexItem
                     key={track.id}
                     context="userShow"

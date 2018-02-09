@@ -36,7 +36,7 @@ class TracksIndex extends React.Component {
     if (Object.keys(newProps.tracks).length > 0 && newProps.currentTrack) {
       let newTrackValues = Object.values(newProps.tracks);
       for (var i = 0; i < newTrackValues.length; i++) {
-        if (newTrackValues[i].id > newProps.currentTrack.id) {
+        if (newTrackValues[i].id < newProps.currentTrack.id) {
           newTracks[newTrackValues[i].id] = newTrackValues[i];
         }
       }
@@ -52,7 +52,7 @@ class TracksIndex extends React.Component {
       <div>
         <h1 className="stream-header">Stream</h1>
         <ul className="tracks-list">
-          {tracks.map(track => (
+          {tracks.reverse().map(track => (
             <TracksIndexItem
               key={track.id}
               context="stream"

@@ -23,7 +23,7 @@ export default (state = {}, action) => {
       return newState;
 
     case RECEIVE_NEXT_TRACKS:
-      newState = merge({}, state, { nextTracksArr: Object.values(action.nextTracks) } );
+      newState = merge({}, state, { nextTracksArr: Object.values(action.nextTracks).reverse() } );
       return newState;
 
     case SHIFT_NEXT_TRACK:
