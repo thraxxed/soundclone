@@ -22,8 +22,9 @@ class FooterPlayer extends React.Component {
   }
 
   playNextTrack() {
-    this.props.shiftNextTrack();
+
     if (this.props.nextTracksArr && this.props.nextTracksArr.length > 0) {
+      this.props.shiftNextTrack();
       this.props.receiveCurrentTrack(this.props.nextTracksArr[0]);
     }
   }
@@ -33,7 +34,7 @@ class FooterPlayer extends React.Component {
   }
 
   goBack() {
-    if (this.props.lastTrack) {
+    if (this.props.lastTrack && this.props.lastTrack.id !== this.props.currentTrack.id) {
       this.props.nextTracksArr.unshift(this.props.currentTrack);
       this.props.receiveCurrentTrack(this.props.lastTrack);
     }
