@@ -10,3 +10,5 @@ Technologies used:
   * Amazon Web Services for image/audio Hosting
 
 # Features
+
+## User Authentication
