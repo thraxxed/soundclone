@@ -13,6 +13,7 @@
 }
 
 .audioplayer-container {
+  // display: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,4 +53,39 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.fa-footer {
+  margin-right: 20px;
+  margin-top: 15px;
+  font-size: 22px;
+  color: #666;
+}
+
+.fa-footer-play {
+  margin-right: 20px;
+  margin-top: 15px;
+  font-size: 22px;
+  color: #666;
+}
+
+#audio-element {
+  // width: 400px;
+  border-left: 10px solid white;
+}
+
+/* Old shadow dom for play button */
+
+*::-webkit-media-controls-play-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+/* New shadow dom for play button */
+
+/* This one works! */
+
+*::-webkit-media-controls-start-playback-button {
+  display: none!important;
+  -webkit-appearance: none;
 }
