@@ -13,6 +13,7 @@ const mapStateToProps = (state) => {
     currentTrack: state.player.currentTrack,
     currentUser: state.session.currentUser,
     nextTracksArr: state.player.nextTracksArr,
+    lastTrack: state.player.lastTrack,
     trackUser: trackUser
   }
 };

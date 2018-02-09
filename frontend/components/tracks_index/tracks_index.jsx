@@ -11,7 +11,6 @@ class TracksIndex extends React.Component {
   componentWillMount() {
     this.props.requestAllTracks();
     this.props.requestComments();
-    if (Object.keys(this.props.tracks).length > 0) this.props.receiveNextTracks(this.props.tracks)
   }
 
   componentDidMount() {

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { updateUser } from '../../utils/session.js';
 
 import FaFastForward from 'react-icons/lib/fa/fast-forward';
+import FaFastBackward from 'react-icons/lib/fa/fast-backward';
 import FaPlay from 'react-icons/lib/fa/play';
 import FaPause from 'react-icons/lib/fa/pause';
 
@@ -13,7 +14,7 @@ class FooterPlayer extends React.Component {
     super(props);
     this.playNextTrack = this.playNextTrack.bind(this);
     this.pause = this.pause.bind(this);
-
+    this.goBack = this.goBack.bind(this);
   }
 
   componentWillMount() {
@@ -31,6 +32,11 @@ class FooterPlayer extends React.Component {
     this.props.pause();
   }
 
+  goBack() {
+    this.props.nextTracksArr.unshift(this.props.currentTrack);
+    this.props.receiveCurrentTrack(this.props.lastTrack);
+  }
+
   render() {
     if (!this.props.currentTrack) return (
       <div className="footer-player">
@@ -38,7 +44,7 @@ class FooterPlayer extends React.Component {
     );
     return (
       <div className="footer-player">
-
+        <FaFastBackward className="fa-footer" onClick={() => this.goBack()}/>
         <FaFastForward className="fa-footer" onClick={() => this.playNextTrack()}/>
         {document.getElementById('audio-element') && document.getElementById('audio-element').paused ?
           <FaPlay className="fa-footer-play" onClick={() => document.getElementById('audio-element').play()}/>
