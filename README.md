@@ -41,3 +41,5 @@ uploaded may be seen.
 
 On an individual track's page, users may comment on the song, and see the list of comments uploaded in
 real-time.  
+
+![Session](https://i.imgur.com/wxF7l7p.jpg)
