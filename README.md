@@ -9,4 +9,4 @@ Technologies used:
   * PostgreSQL database
   * Amazon Web Services for image/audio Hosting
 
-# H2 Features
+# Features
