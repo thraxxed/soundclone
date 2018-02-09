@@ -59,6 +59,8 @@ to the next song, as well as going back to the last-played song.
 
 ![Session](https://i.imgur.com/hmpKA7s.png)
 
+### Footer Player Reducer
+
 ```
 import { RECEIVE_CURRENT_TRACK, RECEIVE_NEXT_TRACKS, SHIFT_NEXT_TRACK, PAUSE } from '../actions/player.js';
 
