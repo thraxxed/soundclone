@@ -19,6 +19,14 @@ to avoid making a new account.
 
 ![Session](https://i.imgur.com/ysRAeQ0.jpg)
 
+## Feed/Stream
+
+Once logged in, Users are shown a collection of the most recently uploaded tracks.  Any tracks which
+were uploaded by the logged-in user will also display buttons allowing the user to edit the track's information,
+as well as to delete the track.
+
+![Session](https://i.imgur.com/eNH6pLc.png)
+
 ## Track Upload
 
 Users may Upload their own songs, with support for also assigning the song a unique image, as well as a genre.
