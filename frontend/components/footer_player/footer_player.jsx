@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 
 import { updateUser } from '../../utils/session.js';
 
+import FaFastForward from 'react-icons/lib/fa/fast-forward';
+import FaPlay from 'react-icons/lib/fa/play';
+import FaPause from 'react-icons/lib/fa/pause';
+
+
 class FooterPlayer extends React.Component {
   constructor(props) {
     super(props);
@@ -33,8 +38,16 @@ class FooterPlayer extends React.Component {
     );
     return (
       <div className="footer-player">
+
+        <FaFastForward className="fa-footer" onClick={() => this.playNextTrack()}/>
+        {document.getElementById('audio-element') && document.getElementById('audio-element').paused ?
+          <FaPlay className="fa-footer-play" onClick={() => document.getElementById('audio-element').play()}/>
+        :
+          <FaPause className="fa-footer-play" onClick={() => document.getElementById('audio-element').pause()}/>
+        }
+
         <div className="audioplayer-container">
-          <div className="fastforward" onClick={() => this.playNextTrack()}></div>
+
           {this.props.currentTrack ?
             <audio
               id="audio-element"
@@ -52,6 +65,9 @@ class FooterPlayer extends React.Component {
             null
           }
         </div>
+
+
+
         <div className="flex-column">
           <div className="current-track-info">
             <Link to={`/tracks/${this.props.currentTrack.id}/show`}>
