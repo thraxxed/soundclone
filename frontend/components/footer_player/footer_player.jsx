@@ -33,8 +33,10 @@ class FooterPlayer extends React.Component {
   }
 
   goBack() {
-    this.props.nextTracksArr.unshift(this.props.currentTrack);
-    this.props.receiveCurrentTrack(this.props.lastTrack);
+    if (this.props.lastTrack) {
+      this.props.nextTracksArr.unshift(this.props.currentTrack);
+      this.props.receiveCurrentTrack(this.props.lastTrack);
+    }
   }
 
   render() {
