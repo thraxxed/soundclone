@@ -22,7 +22,7 @@ Users may create new accounts, with their passwords stored securely using BCrypt
 a personal profile picture.  To immediately jump into the action, users are given the option of a "Demo Login" feature
 to avoid making a new account.
 
-![Session](https://i.imgur.com/ysRAeQ0.jpg)
+![Session](https://i.imgur.com/vlpdZiw.jpg?1)
 
 ## Feed/Stream
 
