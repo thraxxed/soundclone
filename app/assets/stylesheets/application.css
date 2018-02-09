@@ -14,24 +14,6 @@
  *= require_self
  */
 
- /* html, body, section, article, h1, h2, p {
-
-     margin: 0;
-     border: 0;
-     padding: 0;
-
-     font: inherit;
-     text-align: inherit;
-     text-decoration: inherit;
-     color: inherit;
-
-     background: transparent;
-
-     font-family: interstate;
- } */
-
- /* PHASE 0: Reset */
-
 html, body, header, nav, h1, a,
 ul, li, strong, main, button, i,
 section, img, div, h2, p, form,
@@ -66,10 +48,6 @@ input[type="text"],
 input[type="submit"],
 textarea,
 button {
-  /*
-  Get rid of native styling. Read more here:
-  http://css-tricks.com/almanac/properties/a/appearance/
-  */
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

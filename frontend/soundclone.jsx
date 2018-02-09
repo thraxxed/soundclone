@@ -4,7 +4,7 @@ import createStore from './store/store';
 import Root from './components/root';
 
 document.addEventListener('keydown', (e) => {
-  if (e.which === 32) {
+  if (e.which === 32 && e.target.className !== 'upload-form-input') {
     e.preventDefault();
     let audioEl = document.getElementById('audio-element');
     if (audioEl) {

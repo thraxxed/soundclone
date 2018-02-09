@@ -29,6 +29,7 @@ class ProfilePicture extends React.Component {
     formData.append("user[id]", this.props.currentUser.id)
     updateUser(formData)
       .then(() => {
+        
         this.props.currentUser.img_url = this.state.imageUrl;
         this.props.history.push('/users/' + this.props.currentUser.username);
       },

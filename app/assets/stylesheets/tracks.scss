@@ -16,7 +16,6 @@
   flex-direction: column;
   justify-content: space-around;
   overflow: scroll;
-  // margin-bottom: 150px;
   margin-bottom: 65px;
 }
 
@@ -29,8 +28,6 @@
   flex-direction: column;
   position: relative;
   box-shadow: 0 0 10px 1px lightgrey;
-
-  // margin-bottom: 10px;
 }
 
 .track:last-child {
@@ -59,7 +56,6 @@
 
 .upload-body {
   margin-left: 15px;
-  // margin-bottom: 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -142,9 +138,6 @@
   border: 1px solid #f50;
 }
 
-.delete-track > span {
-  // padding: 15px;
-}
 
 .audioplayer {
   width: 100%;
@@ -153,7 +146,6 @@
 }
 
 .lol {
-  // IMPORTANT!!!!! DO NOT DELETE
   height: 30%;
 }
 
@@ -181,8 +173,4 @@
   border: 1px solid black;
   height: 15px;
   margin-bottom: 50px;
-}
-
-#audio-element {
-  // background-color: #f50 !important;
 }

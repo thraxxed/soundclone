@@ -95,9 +95,7 @@ class TrackShow extends React.Component {
 
             </div>
 
-            <div className="trackshow-audioplayer-container">
-              {/* IMPORTANT!!!! DO NOT DELETE */}
-            </div>
+            <div className="trackshow-audioplayer-container"></div>
           </div>
 
 
