@@ -9,9 +9,8 @@
   align-items: center;
   justify-content: space-around;
   border: 1px solid lightgray;
-  // padding: 30px;
   margin-bottom: 65px;
-  // margin-top: 10px;
+  color: #333;
 }
 
 .upload-page > h1 {
@@ -29,7 +28,6 @@
   height: 40px;
   font-size: 16px;
   text-align: center;
-  // margin-top: 20px;
 }
 
 .upload-img {
@@ -49,4 +47,15 @@
   padding: 10px;
   border-radius: 3px;
   border: 1px solid lightgrey;
+}
+
+.choose-file {
+  margin-left: 10px;
+}
+
+.file-flex {
+  margin-left: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }

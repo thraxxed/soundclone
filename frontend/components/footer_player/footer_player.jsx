@@ -8,35 +8,21 @@ class FooterPlayer extends React.Component {
     super(props);
     this.playNextTrack = this.playNextTrack.bind(this);
     this.pause = this.pause.bind(this);
-    
+
   }
 
   componentWillMount() {
     this.props.requestAllTracks();
   }
 
-  componentWillReceiveProps(newprops) {
-    // if (newprops.nextTracksArr) console.log(newprops.nextTracksArr);
-  }
-
-  componentDidMount() {
-
-  }
-
   playNextTrack() {
-
     this.props.shiftNextTrack();
-    // if (Object.keys(this.props.nextTracks).length > 0) {
-    //   this.props.receiveCurrentTrack(Object.values(this.props.nextTracks)[0]);
-    // }
-    // console.log(this.props.nextTracksArr);
     if (this.props.nextTracksArr && this.props.nextTracksArr.length > 0) {
       this.props.receiveCurrentTrack(this.props.nextTracksArr[0]);
     }
   }
 
   pause() {
-    // console.log("pausing");
     this.props.pause();
   }
 
@@ -55,6 +41,7 @@ class FooterPlayer extends React.Component {
               controlsList="nodownload"
               controls
               autoPlay
+              volume="0.5"
               onEnded={() => this.playNextTrack()}
               onPause={() => this.pause()}
               onPlay={() => this.pause()}

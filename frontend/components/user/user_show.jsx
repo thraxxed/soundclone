@@ -8,10 +8,6 @@ class UserShow extends React.Component {
     super(props)
   }
 
-  componentWillMount() {
-    // this.props.requestAllTracks();
-  }
-
   componentDidMount() {
     if (this.props.user) document.title = this.props.user.username;
   }
@@ -21,8 +17,6 @@ class UserShow extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    // console.log("new props");
-    // console.log(newProps);
     let newTracks = {};
     if (Object.keys(newProps.userTrackz).length > 0 && newProps.currentTrack) {
       let newTrackValues = Object.values(newProps.userTrackz);
@@ -32,10 +26,7 @@ class UserShow extends React.Component {
         }
       }
     }
-
-
-    if (Object.keys(newProps.userTrackz).length > 0 && !this.props.currentTrack) //this.props.receiveNextTracks(newProps.userTrackz);
-    this.props.receiveNextTracks(newTracks);
+    if (Object.keys(newProps.userTrackz).length > 0 && !this.props.currentTrack) this.props.receiveNextTracks(newTracks);
   }
 
   render() {

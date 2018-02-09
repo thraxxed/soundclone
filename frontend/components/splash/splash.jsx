@@ -20,10 +20,8 @@ class Splash extends React.Component {
     if (Object.keys(this.props.tracks).length < 0) {
       return null;
     }
-    // console.log(this.props.tracks);
     const tracks = Object.values(this.props.tracks).slice(0, 6);
     const users = this.props.users;
-    console.log(tracks);
     return (
       <div className="splash-flex">
         <div  className="hero-img">

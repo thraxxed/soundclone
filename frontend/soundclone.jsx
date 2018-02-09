@@ -9,10 +9,8 @@ document.addEventListener('keydown', (e) => {
     let audioEl = document.getElementById('audio-element');
     if (audioEl) {
       if (audioEl.paused) {
-        console.log("play audio");
         audioEl.play();
       } else {
-        console.log("pause audio");
         audioEl.pause();
       }
     }

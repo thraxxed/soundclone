@@ -92,36 +92,36 @@ class Upload extends React.Component {
     return (
       <form onSubmit={this.handleSubmit} className="upload-page">
         <h1>Upload to SoundCloud</h1>
-        <br></br><br></br>
-        <label>Audio File
-          <input type="file" onChange={this.updateAudioFile}/>
-        </label>
-        <br></br>
-        <label>Track Image
-          <input type="file" onChange={this.updateImageFile}/>
-        </label>
-        <br></br>
+        <div className="file-flex">
+          <span>Audio File</span>
+          <input className="choose-file" type="file" onChange={this.updateAudioFile}/>
+        </div>
+        <div className="file-flex">
+          <span>Track Image</span>
+          <input className="choose-file" type="file" onChange={this.updateImageFile}/>
+        </div>
         {this.state.imageUrl ? <img className="upload-img" src={this.state.imageUrl}/> : null}
-        <label className="upload-form-inputs">
-          <input
-            className="upload-form-input"
-            type="text"
-            placeholder="Title *"
-            value={this.state.title}
-            onChange={this.handleInput('title')}
-          />
-        </label>
-        <label className="upload-form-inputs">
-          <input
-            className="upload-form-input"
-            type="text"
-            placeholder="Genre *"
-            value={this.state.genre}
-            onChange={this.handleInput('genre')}
-          />
-        </label>
+          <label className="upload-form-inputs">
+            <input
+              className="upload-form-input"
+              type="text"
+              placeholder="Title *"
+              value={this.state.title}
+              onChange={this.handleInput('title')}
+            />
+          </label>
+          <label className="upload-form-inputs">
+            <input
+              className="upload-form-input"
+              type="text"
+              placeholder="Genre *"
+              value={this.state.genre}
+              onChange={this.handleInput('genre')}
+            />
+          </label>
+
         {this.renderErrors()}
-        <button type='submit' className="upload-submit-btn">Create Song</button>
+        <button type='submit' className="upload-submit-btn">Save</button>
       </form>
     );
   }
