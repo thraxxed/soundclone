@@ -3,6 +3,8 @@
 SoundClone is a web application designed to emulate the functionality and style of popular
 music platform SoundCloud.  Users may upload their own tracks, and listen to those uploaded by others.
 
+https://sound-clone.herokuapp.com/#/
+
 Technologies used:
   * Ruby on Rails back-end
   * React/Redux front-end
