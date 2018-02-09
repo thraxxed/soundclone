@@ -32,6 +32,10 @@
   margin-left: 15px;
   display: flex;
   flex-direction: column;
+  // width: 200px;
+  text-overflow: ellipsis;
+  height: 40px;
+  overflow-y: hidden;
 }
 
 .footer-img {
@@ -48,6 +52,14 @@
 .footer-title {
   font-size: 12px;
   color: #666;
+
+  text-overflow: ellipsis;
+  height: 20px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 140px;
+  white-space: nowrap;
+  // width: 10px;
 }
 
 .flex-column {

@@ -1,5 +1,2 @@
-onEnded - audio element
+positioning of footer player elements changes too drastically with length of song title
 
-dispatch action -- replace currentSong with next song in queue.
-
--- tried to add links to footer player image/username/title, messed up the styling hard.  Links have height/width?
