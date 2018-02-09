@@ -105,3 +105,26 @@ export default (state = {}, action) => {
   }
 }
 ```
+
+## Play/Pause audio via spacebar
+
+Users may pause/resume the current song by pressing the spacebar.  This was a fun, albeit
+quick feature to implement, because originally adding the event listener for keydown removed
+the ability to type spaces into form text inputs.  Here is the code snippet which solved this problem.
+
+```
+document.addEventListener('keydown', (e) => {
+  if (e.which === 32 && e.target.className === 'vsc-initialized') {
+    e.preventDefault();
+    let audioEl = document.getElementById('audio-element');
+    if (audioEl) {
+      if (audioEl.paused) {
+        audioEl.play();
+      } else {
+        audioEl.pause();
+      }
+    }
+  }
+});
+
+```
