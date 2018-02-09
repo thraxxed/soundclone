@@ -58,3 +58,5 @@ their individual state, and reacting as such.  The audio player also contains cu
 to the next song, as well as going back to the last-played song.
 
 ![Session](https://i.imgur.com/hmpKA7s.png)
+
+![Session](https://i.imgur.com/skkhop9.png)
