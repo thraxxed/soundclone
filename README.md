@@ -54,3 +54,5 @@ This was an incredibly valuable exercise in the understanding of application sta
 the footer player required that multiple distinct React components are constantly communicating with one another about
 their individual state, and reacting as such.  The audio player also contains custom buttons which allow the user to skip
 to the next song, as well as going back to the last-played song.
+
+![Session](https://i.imgur.com/hmpKA7s.png)
