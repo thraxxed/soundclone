@@ -9,6 +9,17 @@ class Signup extends React.Component {
       password: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
+  }
+
+  demoLogin(e) {
+    const formUser = {
+      username: 'username',
+      password: 'password'
+    };
+    e.preventDefault();
+    this.props.demoLogin(formUser)
+      .then(() => this.props.history.push('/stream'));
   }
 
   componentDidMount() {
@@ -66,6 +77,7 @@ class Signup extends React.Component {
           </label>
           {this.renderErrors()}
           <button className="submit-btn" onClick={this.handleSubmit}>Sign Up</button>
+          <button className="submit-btn" onClick={this.demoLogin}>Demo Login</button>
         </form>
       </div>
     );
