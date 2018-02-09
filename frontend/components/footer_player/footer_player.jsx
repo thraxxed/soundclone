@@ -34,6 +34,7 @@ class FooterPlayer extends React.Component {
     return (
       <div className="footer-player">
         <div className="audioplayer-container">
+          <div className="fastforward" onClick={() => this.playNextTrack()}></div>
           {this.props.currentTrack ?
             <audio
               id="audio-element"
