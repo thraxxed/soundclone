@@ -4,7 +4,6 @@ import createStore from './store/store';
 import Root from './components/root';
 
 document.addEventListener('keydown', (e) => {
-  console.log(e.target.className);
   if (e.which === 32 && e.target.className === 'vsc-initialized') {
     e.preventDefault();
     let audioEl = document.getElementById('audio-element');
