@@ -78,7 +78,7 @@ class Upload extends React.Component {
   renderErrors() {
     if (this.props.errors.length < 1) return;
     return (
-      <ul className="form-errors">
+      <ul className="upload-errors">
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
             {error}
